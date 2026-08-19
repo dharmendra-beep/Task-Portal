@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Project</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Task Portal
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item">
+                Dashboard
+            </a>
+
+            <a href="task.html" class="menu-item">
+                Task
+            </a>
+
+            <a href="meeting.html" class="menu-item">
+                Meeting
+            </a>
+
+            <a href="document.html" class="menu-item">
+                Document
+            </a>
+
+            <a href="project.html" class="menu-item active">
+                My Project
+            </a>
+
+            <a href="new-project.html" class="menu-item">
+                 New Project
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-bottom-icon"></div>
+
+            <div>
+                <div class="sidebar-bottom-title">
+                    Work Smarter,<br>
+                    Achieve Faster!
+                </div>
+
+                <div class="sidebar-bottom-text">
+                    Keep tracking, keep growing.
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= HEADER ================= -->
+
+       <header class="header dashboard-header my-project-header">
+
+    <div class="header-left">
+
+        <div class="dashboard-header-icon my-project-header-icon">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <!-- Folder -->
+                <path
+                    d="M3 6.5a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                ></path>
+
+                <!-- Progress line -->
+                <path
+                    d="M7 14h3"
+                ></path>
+
+                <path
+                    d="M7 17h7"
+                ></path>
+
+                <!-- Small check -->
+                <path
+                    d="m15 12 1.5 1.5L19 11"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+        <div class="dashboard-header-text">
+
+            <div class="dashboard-title-row">
+
+                <h1>
+                    My Project
+                </h1>
+
+                <span class="dashboard-title-line"></span>
+
+            </div>
+
+
+            <p>
+                Stay organized, track progress, and turn every project into success. 🚀
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+
+        <div class="dashboard-date">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+            </svg>
+
+
+            <div>
+
+                <strong>
+                    19 Aug 2026
+                </strong>
+
+                <span>
+                    Tuesday
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-admin">
+
+            <div class="dashboard-admin-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="4"
+                    ></circle>
+
+                    <path
+                        d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+                    ></path>
+
+                </svg>
+
+            </div>
+
+
+            <div class="dashboard-admin-text">
+
+                <strong>
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+
+            <span class="dashboard-admin-arrow">
+                ▼
+            </span>
+             <!-- Logout Menu -->
+
+    <div
+        class="admin-dropdown"
+        id="adminDropdown"
+    >
+
+        <button
+            type="button"
+            id="logoutButton"
+        >
+
+            
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content project-content">
+
+
+            <!-- ================= TOP BAR ================= -->
+
+            <div class="project-topbar">
+
+
+                <!-- SEARCH -->
+
+                <div class="project-toolbar">
+
+                    <input
+                        type="text"
+                        id="projectSearch"
+                        placeholder="Search Project..."
+                    >
+
+                    <button
+                        type="button"
+                        id="clearProjectSearch"
+                        class="clear-project-search"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <!-- ADD PROJECT -->
+
+                <button
+                    type="button"
+                    id="addProjectButton"
+                    class="add-project-button"
+                >
+                    + Add Project
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= PROJECT TABLE ================= -->
+
+            <div class="project-table-container">
+
+                <table class="project-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Project Name
+                            </th>
+
+                            <th>
+                                Past BA
+                            </th>
+
+                            <th>
+                                Present B.A
+                            </th>
+
+                            <th>
+                                Sales Person
+                            </th>
+
+                            <th>
+                                Project Type
+                            </th>
+
+                            <th>
+                                Total User
+                            </th>
+
+                            <th>
+                                Business Type
+                            </th>
+
+                            <th>
+                                Web Portal
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="projectTableBody">
+
+                        <!-- Projects JavaScript se aayenge -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+                         ADD PROJECT MODAL
+    =================================================== -->
+
+    <div
+        id="projectModal"
+        class="project-modal"
+    >
+
+        <div class="project-modal-content">
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="project-modal-header">
+
+                <h2>
+                    Add Project
+                </h2>
+
+                <button
+                    type="button"
+                    id="closeProjectForm"
+                    class="project-modal-close"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= FORM ================= -->
+
+            <form id="addProjectForm">
+
+
+                <div class="project-form-grid">
+
+
+                    <!-- PROJECT NAME -->
+
+                    <div class="project-form-group">
+
+                        <label for="projectName">
+                            Project Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="projectName"
+                            placeholder="Enter Project Name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PAST BA -->
+
+                    <div class="project-form-group">
+
+                        <label for="pastBA">
+                            Past BA
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pastBA"
+                            placeholder="Enter Past BA"
+                        >
+
+                    </div>
+
+
+
+                    <!-- PRESENT BA -->
+
+                    <div class="project-form-group">
+
+                        <label for="presentBA">
+                            Present B.A
+                        </label>
+
+                        <input
+                            type="text"
+                            id="presentBA"
+                            placeholder="Enter Present B.A"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SALES PERSON -->
+
+                    <div class="project-form-group">
+
+                        <label for="salesPerson">
+                            Sales Person
+                        </label>
+
+                        <input
+                            type="text"
+                            id="salesPerson"
+                            placeholder="Enter Sales Person"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PROJECT TYPE -->
+
+                    <div class="project-form-group">
+
+                        <label for="projectType">
+                            Project Type
+                        </label>
+
+                        <select
+                            id="projectType"
+                            required
+                        >
+
+                            <option value="">
+                                Select Project Type
+                            </option>
+
+                            <option value="Loyalty">
+                                Loyalty
+                            </option>
+
+                            <option value="SFA">
+                                SFA
+                            </option>
+
+                            <option value="DMS">
+                                DMS
+                            </option>
+
+                            <option value="Loyalty, SFA & DMS">
+                                Loyalty, SFA & DMS
+                            </option>
+
+                            <option value="Loyalty & SFA">
+                                Loyalty & SFA
+                            </option>
+
+                            <option value="Loyalty & DMS">
+                                Loyalty & DMS
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- TOTAL USER -->
+
+                    <div class="project-form-group">
+
+                        <label for="totalUser">
+                            Total User
+                        </label>
+
+                        <input
+                            type="number"
+                            id="totalUser"
+                            placeholder="Enter Total User"
+                            min="0"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- BUSINESS TYPE -->
+
+                    <div class="project-form-group">
+
+                        <label for="businessType">
+                            Business Type
+                        </label>
+
+                        <input
+                            type="text"
+                            id="businessType"
+                            placeholder="Enter Business Type"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- WEB PORTAL URL -->
+
+                    <div class="project-form-group">
+
+                        <label for="webPortalUrl">
+                            Web Portal URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="webPortalUrl"
+                            placeholder="https://example.com"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FORM BUTTONS -->
+
+                <div class="project-form-actions">
+
+                    <button
+                        type="button"
+                        id="cancelProjectForm"
+                        class="project-cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="project-save-button"
+                    >
+                        Save Project
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+                         SUCCESS POPUP
+    =================================================== -->
+
+    <div
+        id="projectSuccessPopup"
+        class="project-success-popup"
+    >
+
+        <div class="project-success-content">
+
+            <div class="project-success-icon">
+                ✓
+            </div>
+
+            <h3>
+                Project Added Successfully
+            </h3>
+
+            <p>
+                Project has been added successfully.
+            </p>
+
+            <button
+                type="button"
+                id="projectSuccessClose"
+            >
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="project.js"></script>
+
+</body>
+
+</html>

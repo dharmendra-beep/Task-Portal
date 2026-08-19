@@ -1,0 +1,772 @@
+/* =========================
+   DOCUMENT MANAGEMENT
+========================= */
+
+.document-content {
+    padding-top: 12px;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.document-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.document-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#documentSearch {
+    width: 330px;
+    height: 40px;
+    padding: 0 13px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #111827;
+
+    font-size: 14px;
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+#documentSearch:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.clear-document-search {
+    height: 40px;
+    padding: 0 15px;
+
+    border: 1px solid #dc2626;
+    border-radius: 7px;
+
+    background: #ef4444;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.clear-document-search:hover {
+    background: #dc2626;
+}
+
+
+/* =========================
+   ADD DOCUMENT BUTTON
+========================= */
+
+.add-document-button {
+    padding: 10px 18px;
+
+    border: 1px solid #2563eb;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.add-document-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.document-table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 9px;
+
+    box-sizing: border-box;
+}
+
+.document-table {
+    width: 100%;
+    min-width: 1200px;
+
+    border-collapse: collapse;
+}
+
+.document-table th {
+    padding: 13px 18px;
+
+    background: #f8fafc;
+
+    color: #1f2937;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.document-table td {
+    padding: 14px 18px;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    text-align: center;
+}
+
+.document-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================
+   PROJECT FILTER
+========================= */
+
+.document-project-filter {
+    margin-top: 7px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#documentProjectSearch {
+    width: 180px;
+    height: 32px;
+
+    padding: 0 10px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    background: #ffffff;
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+#documentProjectSearch:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   FILE STATUS
+========================= */
+
+.document-file-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.document-file-status.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.document-file-status.uploaded {
+    background: #dcfce7;
+    color: #166534;
+}
+
+
+/* =========================
+   FILE BUTTON
+========================= */
+
+.document-file-button {
+    padding: 7px 13px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.document-file-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.document-modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    z-index: 1000;
+}
+
+.document-modal-content {
+    width: 800px;
+    max-width: 92%;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   MODAL HEADER
+========================= */
+
+.document-modal-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.document-modal-header h2 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 20px;
+}
+
+.document-modal-close {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #6b7280;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.document-modal-close:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+#addDocumentForm {
+    padding: 22px;
+}
+
+.document-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 17px 20px;
+}
+
+.document-form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.document-form-group label {
+    margin-bottom: 6px;
+
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.document-form-group input,
+.document-form-group select {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 11px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.document-form-group input:focus,
+.document-form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.document-form-group input:read-only {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.document-form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.document-cancel-button,
+.document-save-button {
+    padding: 9px 18px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.document-cancel-button {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+    color: #374151;
+}
+
+.document-cancel-button:hover {
+    background: #f3f4f6;
+}
+
+.document-save-button {
+    border: 1px solid #2563eb;
+
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.document-save-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   SUCCESS POPUP
+========================= */
+
+.document-success-popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(15, 23, 42, 0.45);
+
+    z-index: 1100;
+}
+
+.document-success-content {
+    width: 350px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.document-success-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+    color: #16a34a;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.document-success-content h3 {
+    margin: 0 0 8px;
+
+    color: #1f2937;
+}
+
+.document-success-content p {
+    margin: 0 0 20px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+#documentSuccessClose {
+    padding: 8px 22px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#documentSuccessClose:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .document-topbar {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .document-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================================================
+   DOCUMENT MANAGEMENT HEADER
+================================================== */
+
+.document-header {
+
+    height: 84px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    padding: 0 28px !important;
+
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.document-header .header-left {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 14px !important;
+
+}
+
+
+/* =========================
+   DOCUMENT ICON
+========================= */
+
+.document-header .document-header-icon {
+
+    width: 44px !important;
+    height: 44px !important;
+
+    flex-shrink: 0;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f1ff,
+            #dbeafe
+        );
+
+    color: #2563eb;
+
+}
+
+
+.document-header .document-header-icon svg {
+
+    width: 23px !important;
+    height: 23px !important;
+
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.document-header .dashboard-header-text {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.document-header .dashboard-title-row {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+
+}
+
+
+.document-header .dashboard-title-row h1 {
+
+    margin: 0 !important;
+
+    font-size: 27px !important;
+
+    line-height: 1.1 !important;
+
+    font-weight: 700 !important;
+
+    color: #0f172a;
+
+}
+
+
+/* =========================
+   BLUE LINE
+========================= */
+
+.document-header .dashboard-title-line {
+
+    width: 28px;
+
+    height: 4px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #60a5fa
+        );
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.document-header .dashboard-header-text p {
+
+    margin: 4px 0 0 !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.2 !important;
+
+    color: #64748b;
+
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.document-header .header-right {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 22px !important;
+
+}
+
+#logoutButton {
+    width: 100%;
+    height: 38px;
+
+    padding: 0 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    box-shadow:
+        0 4px 12px
+        rgba(15, 23, 42, 0.08);
+}
+
+#logoutButton:hover {
+    background: #f8fafc;
+
+    color: #2563eb;
+
+    border-color: #cbd5e1;
+}

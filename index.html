@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TASK Portal</title>
+
+   <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <!-- =========================
+     SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="sidebar-brand-title">
+            Task Portal
+        </div>
+
+        <div class="sidebar-brand-subtitle">
+            Task Management
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+
+        <!-- Dashboard -->
+
+        <a href="index.html"
+           class="sidebar-menu-item active">
+
+            <span class="sidebar-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <rect x="3" y="3"
+                          width="7"
+                          height="7"
+                          rx="1"></rect>
+
+                    <rect x="14" y="3"
+                          width="7"
+                          height="7"
+                          rx="1"></rect>
+
+                    <rect x="3" y="14"
+                          width="7"
+                          height="7"
+                          rx="1"></rect>
+
+                    <rect x="14" y="14"
+                          width="7"
+                          height="7"
+                          rx="1"></rect>
+
+                </svg>
+
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- Task -->
+
+        <a href="task.html"
+           class="sidebar-menu-item">
+
+            <span class="sidebar-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <path d="M9 11l3 3L22 4"></path>
+
+                    <path d="M21 12v7
+                             a2 2 0 0 1-2 2H5
+                             a2 2 0 0 1-2-2V5
+                             a2 2 0 0 1 2-2h11"></path>
+
+                </svg>
+
+            </span>
+
+            <span>
+                Task
+            </span>
+
+        </a>
+
+
+        <!-- Meeting -->
+
+        <a href="meeting.html"
+           class="sidebar-menu-item">
+
+            <span class="sidebar-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <rect x="3" y="5"
+                          width="18"
+                          height="16"
+                          rx="2"></rect>
+
+                    <line x1="16"
+                          y1="3"
+                          x2="16"
+                          y2="7"></line>
+
+                    <line x1="8"
+                          y1="3"
+                          x2="8"
+                          y2="7"></line>
+
+                    <line x1="3"
+                          y1="10"
+                          x2="21"
+                          y2="10"></line>
+
+                </svg>
+
+            </span>
+
+            <span>
+                Meeting
+            </span>
+
+        </a>
+
+
+        <!-- Document Management -->
+
+        <a href="document.html"
+           class="sidebar-menu-item">
+
+            <span class="sidebar-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <path d="M14 2H6
+                             a2 2 0 0 0-2 2v16
+                             a2 2 0 0 0 2 2h12
+                             a2 2 0 0 0 2-2V8z"></path>
+
+                    <polyline points="14 2 14 8 20 8"></polyline>
+
+                    <line x1="8"
+                          y1="13"
+                          x2="16"
+                          y2="13"></line>
+
+                    <line x1="8"
+                          y1="17"
+                          x2="16"
+                          y2="17"></line>
+
+                </svg>
+
+            </span>
+
+            <span>
+                Document
+            </span>
+
+        </a>
+
+
+        <!-- My Project -->
+
+        <a href="project.html"
+           class="sidebar-menu-item">
+
+            <span class="sidebar-icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <path d="M3 7
+                             a2 2 0 0 1 2-2h5l2 2h7
+                             a2 2 0 0 1 2 2v10
+                             a2 2 0 0 1-2 2H5
+                             a2 2 0 0 1-2-2z"></path>
+
+                </svg>
+
+            </span>
+
+            <span>
+                My Project
+            </span>
+
+        </a>
+
+        <a href="new-project.html"
+   class="sidebar-menu-item">
+
+    <span class="sidebar-icon">
+
+        <svg viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path>
+
+            <path d="M12 10v6"></path>
+
+            <path d="M9 13h6"></path>
+
+        </svg>
+
+    </span>
+
+    <span>
+        New Project
+    </span>
+
+</a>
+
+
+    </nav>
+
+
+    <!-- Bottom User Area -->
+
+    <div class="sidebar-bottom">
+
+        <div class="sidebar-bottom-icon"></div>
+
+        <div>
+            <div class="sidebar-bottom-title">
+                Work Smarter,<br>
+                Achieve Faster!
+            </div>
+
+            <div class="sidebar-bottom-text">
+                Keep tracking, keep growing.
+            </div>
+        </div>
+
+    </div>
+
+</aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header dashboard-header">
+
+    <div class="header-left">
+
+        <div class="dashboard-header-icon">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="3"
+                    width="7"
+                    height="7"
+                    rx="1"
+                ></rect>
+
+                <rect
+                    x="14"
+                    y="3"
+                    width="7"
+                    height="7"
+                    rx="1"
+                ></rect>
+
+                <rect
+                    x="3"
+                    y="14"
+                    width="7"
+                    height="7"
+                    rx="1"
+                ></rect>
+
+                <rect
+                    x="14"
+                    y="14"
+                    width="7"
+                    height="7"
+                    rx="1"
+                ></rect>
+
+            </svg>
+
+        </div>
+
+
+        <div class="dashboard-header-text">
+
+            <div class="dashboard-title-row">
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <span class="dashboard-title-line"></span>
+
+            </div>
+
+
+            <p>
+                Welcome back, Admin! 👋
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+
+        <div class="dashboard-date">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+            </svg>
+
+
+            <div>
+
+                <strong>
+                    19 Aug 2026
+                </strong>
+
+                <span>
+                    Tuesday
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-admin" id="adminMenu">
+
+    <div class="dashboard-admin-icon">
+
+        <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+
+            <circle
+                cx="12"
+                cy="8"
+                r="4"
+            ></circle>
+
+            <path
+                d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+            ></path>
+
+        </svg>
+
+    </div>
+
+
+    <div class="dashboard-admin-text">
+
+        <strong>
+            Admin
+        </strong>
+
+        <span>
+            Administrator
+        </span>
+
+    </div>
+
+
+    <span class="dashboard-admin-arrow">
+        ▼
+    </span>
+
+
+    <!-- Logout Menu -->
+
+    <div
+        class="admin-dropdown"
+        id="adminDropdown"
+    >
+
+        <button
+            type="button"
+            id="logoutButton"
+        >
+
+            
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+</div>
+
+    </div>
+
+</header>
+
+
+        <!-- Page Content -->
+        <!-- =========================
+     DASHBOARD CONTENT
+========================= -->
+
+<section class="content dashboard-content">
+
+
+    <!-- =========================
+         DASHBOARD TOP
+    ========================= -->
+
+    <div class="dashboard-top">
+
+        <div class="dashboard-title">
+
+            <h2>
+                Task Overview
+            </h2>
+
+            <p>
+                Track your work, tasks and performance
+            </p>
+
+        </div>
+
+
+        <!-- MONTH SELECTOR -->
+
+        <div class="dashboard-month">
+
+            <label for="dashboardMonth">
+                Month
+            </label>
+
+            <select id="dashboardMonth">
+
+                <option value="2026-08">
+                    August 2026
+                </option>
+
+                <option value="2026-07">
+                    July 2026
+                </option>
+
+                <option value="2026-06">
+                    June 2026
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         KPI CARDS
+    ========================= -->
+
+    <div class="dashboard-kpi-grid">
+
+
+        <!-- TOTAL TASKS -->
+
+        <div class="dashboard-kpi-card">
+
+            <div class="kpi-card-top">
+
+                <div class="kpi-icon total-task-icon">
+                    ✓
+                </div>
+
+                <span class="kpi-label">
+                    TOTAL TASKS
+                </span>
+
+            </div>
+
+            <div
+                id="dashboardTotalTasks"
+                class="kpi-value"
+            >
+                0
+            </div>
+
+            <div class="kpi-description">
+                This Month
+            </div>
+
+        </div>
+
+
+
+        <!-- PENDING -->
+
+        <div class="dashboard-kpi-card">
+
+            <div class="kpi-card-top">
+
+                <div class="kpi-icon pending-task-icon">
+                    !
+                </div>
+
+                <span class="kpi-label">
+                    PENDING TASKS
+                </span>
+
+            </div>
+
+            <div
+                id="dashboardPendingTasks"
+                class="kpi-value"
+            >
+                0
+            </div>
+
+            <div class="kpi-description">
+                Awaiting Start
+            </div>
+
+        </div>
+
+
+
+        <!-- IN PROCESS -->
+
+        <div class="dashboard-kpi-card">
+
+            <div class="kpi-card-top">
+
+                <div class="kpi-icon process-task-icon">
+                    ↻
+                </div>
+
+                <span class="kpi-label">
+                    IN PROCESS
+                </span>
+
+            </div>
+
+            <div
+                id="dashboardInProcessTasks"
+                class="kpi-value"
+            >
+                0
+            </div>
+
+            <div class="kpi-description">
+                Currently Working
+            </div>
+
+        </div>
+
+
+
+        <!-- CLOSED -->
+
+        <div class="dashboard-kpi-card">
+
+            <div class="kpi-card-top">
+
+                <div class="kpi-icon closed-task-icon">
+                    ✓
+                </div>
+
+                <span class="kpi-label">
+                    CLOSED TASKS
+                </span>
+
+            </div>
+
+            <div
+                id="dashboardClosedTasks"
+                class="kpi-value"
+            >
+                0
+            </div>
+
+            <div class="kpi-description">
+                Completed
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         WORK PERFORMANCE
+    ========================= -->
+
+    <div class="dashboard-performance-card">
+
+        <div class="dashboard-section-title">
+
+            <div>
+
+                <h3>
+                    Work Performance
+                </h3>
+
+                <p>
+                    Overall task completion performance
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="performance-grid">
+
+
+            <!-- COMPLETION RATE -->
+
+            <div class="performance-item">
+
+                <span class="performance-label">
+                    Completion Rate
+                </span>
+
+                <strong
+                    id="dashboardCompletionRate"
+                    class="performance-value"
+                >
+                    0%
+                </strong>
+
+            </div>
+
+
+
+            <!-- AVERAGE COMPLETION -->
+
+            <div class="performance-item">
+
+                <span class="performance-label">
+                    Avg. Completion Time
+                </span>
+
+                <strong
+                    id="dashboardAverageTime"
+                    class="performance-value"
+                >
+                    0 Days
+                </strong>
+
+            </div>
+
+
+
+            <!-- COMPLETED -->
+
+            <div class="performance-item">
+
+                <span class="performance-label">
+                    Tasks Completed
+                </span>
+
+                <strong
+                    id="dashboardCompletedTasks"
+                    class="performance-value"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <!-- OVERDUE -->
+
+            <div class="performance-item">
+
+                <span class="performance-label">
+                    Overdue Tasks
+                </span>
+
+                <strong
+                    id="dashboardOverdueTasks"
+                    class="performance-value overdue-value"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         PROJECT + STATUS ROW
+    ========================= -->
+
+    <div class="dashboard-main-grid">
+
+
+        <!-- =========================
+             TOP 10 PROJECTS
+        ========================= -->
+
+        <div class="dashboard-panel project-summary-panel">
+
+
+            <div class="dashboard-panel-header">
+
+                <div>
+
+                    <h3>
+                        Top 10 Projects
+                    </h3>
+
+                    <p id="projectSummaryMonth">
+                        August 2026 Task Summary
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-summary-table-container">
+
+                <table class="project-summary-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Project
+                            </th>
+
+                            <th>
+                                Tasks
+                            </th>
+
+                            <th>
+                                Closed
+                            </th>
+
+                            <th>
+                                In-Process
+                            </th>
+
+                            <th>
+                                Pending
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="dashboardProjectTableBody">
+
+                        <tr>
+
+                            <td colspan="6">
+                                No project data available
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             TASK STATUS
+        ========================= -->
+
+        <div class="dashboard-panel task-status-panel">
+
+
+            <div class="dashboard-panel-header">
+
+                <div>
+
+                    <h3>
+                        Task Status
+                    </h3>
+
+                    <p>
+                        Current task distribution
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-status-content">
+
+
+                <!-- DONUT -->
+
+                <div class="task-donut-wrapper">
+
+                    <div
+                        id="taskStatusDonut"
+                        class="task-status-donut"
+                    >
+
+                        <div class="task-donut-center">
+
+                            <strong
+                                id="dashboardDonutTotal"
+                            >
+                                0
+                            </strong>
+
+                            <span>
+                                Total Tasks
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LEGEND -->
+
+                <div class="task-status-legend">
+
+
+                    <div class="status-legend-item">
+
+                        <span
+                            class="status-dot pending-dot"
+                        ></span>
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <strong
+                            id="dashboardPendingPercent"
+                        >
+                            0%
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="status-legend-item">
+
+                        <span
+                            class="status-dot process-dot"
+                        ></span>
+
+                        <span>
+                            In-Process
+                        </span>
+
+                        <strong
+                            id="dashboardProcessPercent"
+                        >
+                            0%
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="status-legend-item">
+
+                        <span
+                            class="status-dot closed-dot"
+                        ></span>
+
+                        <span>
+                            Closed
+                        </span>
+
+                        <strong
+                            id="dashboardClosedPercent"
+                        >
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+<!-- =========================
+     TASK STATUS OVERVIEW
+========================= -->
+
+<div class="dashboard-panel issue-overview-panel">
+
+    <div class="dashboard-panel-header">
+
+        <div>
+
+            <h3>
+                Task Status Overview
+            </h3>
+
+            <p>
+                Pending tasks vs completed tasks
+            </p>
+
+        </div>
+
+
+        <div class="issue-summary">
+
+            <div class="issue-summary-item">
+
+                <span>
+                    Pending
+                </span>
+
+                <strong
+                    id="dashboardIssuesRaised"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="issue-summary-item">
+
+                <span>
+                    Completed
+                </span>
+
+                <strong
+                    id="dashboardIssuesResolved"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="issue-summary-item">
+
+                <span>
+                    Completion Rate
+                </span>
+
+                <strong
+                    id="dashboardResolutionRate"
+                >
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>        <!-- ISSUE GRAPH -->
+
+        <div class="issue-chart-wrapper">
+
+            <div
+                id="issueChart"
+                class="issue-chart"
+            >
+
+                <!-- Chart JavaScript se generate hoga -->
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+    </main>
+
+
+   <script src="dashboard.js"></script>
+
+</body>
+</html>

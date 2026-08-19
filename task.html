@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Management</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Task Portal
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item">
+                Dashboard
+            </a>
+
+            <a href="task.html" class="menu-item active">
+                Task
+            </a>
+
+            <a href="meeting.html" class="menu-item">
+                Meeting
+            </a>
+
+            <a href="document.html" class="menu-item">
+                Document
+            </a>
+
+            <a href="project.html" class="menu-item">
+                My Project
+            </a>
+            <a href="new-project.html" class="menu-item">
+
+   
+
+    <span>
+        New Project
+    </span>
+
+</a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-bottom-icon"></div>
+
+            <div>
+                <div class="sidebar-bottom-title">
+                    Work Smarter,<br>
+                    Achieve Faster!
+                </div>
+
+                <div class="sidebar-bottom-text">
+                    Keep tracking, keep growing.
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+       <header class="header dashboard-header task-header">
+
+    <div class="header-left">
+
+        <div class="dashboard-header-icon task-header-icon">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <!-- Clipboard -->
+                <rect
+                    x="5"
+                    y="4"
+                    width="14"
+                    height="17"
+                    rx="2"
+                ></rect>
+
+                <path
+                    d="M9 4.5V3h6v1.5"
+                ></path>
+
+                <!-- Check -->
+                <path
+                    d="m8 12 2.2 2.2L16 8.5"
+                ></path>
+
+                <!-- Lines -->
+                <path
+                    d="M8 17h8"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+        <div class="dashboard-header-text">
+
+            <div class="dashboard-title-row">
+
+                <h1>
+                    Task Management
+                </h1>
+
+                <span class="dashboard-title-line"></span>
+
+            </div>
+
+
+            <p>
+                Stay focused, complete your tasks, and keep moving forward. 💪
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+        <div class="dashboard-date">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+            </svg>
+
+
+            <div>
+
+                <strong>
+                    19 Aug 2026
+                </strong>
+
+                <span>
+                    Tuesday
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-admin">
+
+            <div class="dashboard-admin-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="4"
+                    ></circle>
+
+                    <path
+                        d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+                    ></path>
+
+                </svg>
+
+            </div>
+
+
+            <div class="dashboard-admin-text">
+
+                <strong>
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+
+            <span class="dashboard-admin-arrow">
+                ▼
+            </span>
+
+             <!-- Logout Menu -->
+
+    <div
+        class="admin-dropdown"
+        id="adminDropdown"
+    >
+
+        <button
+            type="button"
+            id="logoutButton"
+        >
+
+            
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+        </div>
+
+    </div>
+
+</header>
+        <section class="content">
+            
+
+
+<div class="task-parent-tabs">
+
+    <button class="task-tab active">Pending Task</button>
+
+    <button class="task-tab">In Process</button>
+
+    <button class="task-tab">Closed</button>
+
+    <button class="task-tab">Reject</button>
+
+</div>
+<div class="task-child-tabs">
+
+    <button class="task-child-tab active">
+        Client Side Pending
+    </button>
+
+    <button class="task-child-tab">
+        Development Pending
+    </button>
+
+    <button class="task-child-tab">
+        Testing Pending
+    </button>
+
+    <button class="task-child-tab">
+        In Review Pending
+    </button>
+
+    <button class="task-child-tab">
+        Confirmation Pending
+    </button>
+
+</div>
+<div class="task-search-box">
+    <input
+        type="text"
+        id="taskSearch"
+        placeholder="Search by Project Name or Task ID..."
+    >
+</div>
+<button type="button" id="clearProjectSearch">Clear</button>
+<div class="task-table-container">
+
+    <table class="task-table">
+
+        <thead>
+            <tr>
+                <th> Project Name
+                    <div class="project-filter-box">
+    <input
+        type="text"
+        id="projectSearch"
+        placeholder="Search Project"
+    >
+</div>
+
+</th>
+                
+                <th>Task ID</th>
+                <th>Created Date</th>
+                <th>Estimation Date</th>
+                <th>Estimation Assign</th>
+                <th>Assign Developer</th>
+                <th>Development Working Time</th>
+                <th>Task Receive Date</th>
+                <th>Task Receive Time</th>
+                <th>APK Submission Date</th>
+                <th>APK Submission Time</th>
+                <th>Related To</th>
+                <th>Contact Person</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+    
+
+</div>
+<button class="add-task-button" id="addTaskButton">
+    +
+</button>
+<div class="task-modal" id="taskModal">
+
+    <div class="task-form">
+
+        <div class="task-form-header">
+            <h2>Add New Task</h2>
+
+            <button type="button" class="close-task-form" id="closeTaskForm">
+                ×
+            </button>
+        </div>
+
+
+        <form id="addTaskForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Project Name</label>
+                    <input type="text" id="projectName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Task ID</label>
+                    <input type="text" id="taskId" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Created Date</label>
+                    <input type="date" id="createdDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Estimation Date</label>
+                    <input type="date" id="estimationDate">
+                </div>
+
+                <div class="form-group">
+                    <label>Estimation Assign</label>
+                    <input type="text" id="estimationAssign">
+                </div>
+
+                <div class="form-group">
+                    <label>Assign Developer</label>
+                    <input type="text" id="developer">
+                </div>
+
+                <div class="form-group">
+                    <label>Development Working Time</label>
+                    <input type="text" id="workingTime">
+                </div>
+
+                <div class="form-group">
+                    <label>Task Receive Date</label>
+                    <input type="date" id="receiveDate">
+                </div>
+
+                <div class="form-group">
+                    <label>Task Receive Time</label>
+                    <input type="time" id="receiveTime">
+                </div>
+
+                <div class="form-group">
+                    <label>APK Submission Date</label>
+                    <input type="date" id="apkDate">
+                </div>
+
+                <div class="form-group">
+                    <label>APK Submission Time</label>
+                    <input type="time" id="apkTime">
+                </div>
+
+                <div class="form-group">
+                    <label>Related To</label>
+                    <input type="text" id="relatedTo">
+                </div>
+
+                <div class="form-group">
+                    <label>Contact Person</label>
+                    <input type="text" id="contactPerson">
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+
+                    <select id="taskStatus" required>
+                        <option value="Pending">Pending Task</option>
+                        <option value="In Process">In Process</option>
+                        <option value="Closed">Closed</option>
+                        <option value="Reject">Reject</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Pending Type</label>
+
+                    <select id="pendingType">
+                        
+                        <option value="Client Side Pending">
+                            Client Side Pending
+                        </option>
+                        <option value="Development Pending">
+                            Development Pending
+                        </option>
+                        <option value="Testing Pending">
+                            Testing Pending
+                        </option>
+                        <option value="In Review Pending">
+                            In Review Pending
+                        </option>
+                        <option value="Confirmation Pending">
+                            Confirmation Pending
+                        </option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-form-actions">
+
+                <button type="button" id="cancelTaskForm">
+                    Cancel
+                </button>
+
+                <button type="submit">
+                    Save Task
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<div class="success-popup" id="successPopup">
+    <div class="success-popup-content">
+        <div class="success-icon">✓</div>
+        <h3>Task Created Successfully</h3>
+        <p>Your task has been added successfully.</p>
+        <button id="successPopupClose">OK</button>
+    </div>
+</div>
+        </section>
+
+    </main>
+
+    <script src="./main.js"></script>
+    <script src="./task.js"></script>
+
+</body>
+</html>
+

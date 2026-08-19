@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meeting Management</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="meeting.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Task Portal
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item">Dashboard</a>
+
+            <a href="task.html" class="menu-item">Task</a>
+
+            <a href="meeting.html" class="menu-item active">Meeting</a>
+
+            <a href="document.html" class="menu-item">Document</a>
+
+            <a href="project.html" class="menu-item">My Project</a>
+            <a href="new-project.html" class="menu-item">
+    New Project
+</a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-bottom-icon"></div>
+
+            <div>
+                <div class="sidebar-bottom-title">
+                    Work Smarter,<br>
+                    Achieve Faster!
+                </div>
+
+                <div class="sidebar-bottom-text">
+                    Keep tracking, keep growing.
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- Page Header -->
+        <header class="header dashboard-header meeting-header">
+
+    <div class="header-left">
+
+        <div class="dashboard-header-icon meeting-header-icon">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <!-- Calendar -->
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="17"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+                <!-- Meeting / People -->
+                <circle
+                    cx="9"
+                    cy="15"
+                    r="1.5"
+                ></circle>
+
+                <circle
+                    cx="15"
+                    cy="15"
+                    r="1.5"
+                ></circle>
+
+                <path
+                    d="M6.5 18c.4-1.4 1.3-2 2.5-2s2.1.6 2.5 2"
+                ></path>
+
+                <path
+                    d="M12.5 18c.4-1.4 1.3-2 2.5-2s2.1.6 2.5 2"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+        <div class="dashboard-header-text">
+
+            <div class="dashboard-title-row">
+
+                <h1>
+                    Meeting Management
+                </h1>
+
+                <span class="dashboard-title-line"></span>
+
+            </div>
+
+
+            <p>
+                Plan smart, meet with purpose, and turn every discussion into progress. 🤝
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+
+        <div class="dashboard-date">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+            </svg>
+
+
+            <div>
+
+                <strong>
+                    19 Aug 2026
+                </strong>
+
+                <span>
+                    Tuesday
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-admin">
+
+            <div class="dashboard-admin-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="4"
+                    ></circle>
+
+                    <path
+                        d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+                    ></path>
+
+                </svg>
+
+            </div>
+
+
+            <div class="dashboard-admin-text">
+
+                <strong>
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+
+            <span class="dashboard-admin-arrow">
+                ▼
+            </span>
+             <!-- Logout Menu -->
+
+    <div
+        class="admin-dropdown"
+        id="adminDropdown"
+    >
+
+        <button
+            type="button"
+            id="logoutButton"
+        >
+
+            
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+        <section class="content meeting-content">
+
+            <div class="meeting-topbar">
+
+                <!-- ================= SEARCH ================= -->
+
+                <div class="meeting-toolbar">
+
+                    <input
+                        type="text"
+                        id="meetingSearch"
+                        placeholder="Search Meeting No. or Project Name..."
+                    >
+
+                    <button
+                        type="button"
+                        id="clearMeetingSearch"
+                        class="clear-meeting-search"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <!-- Meeting Tabs -->
+
+                <div class="meeting-tabs">
+
+                    <button
+                        type="button"
+                        class="meeting-tab active"
+                        data-meeting-type="Online Meeting"
+                    >
+                        Online Meeting
+                    </button>
+
+                    <button
+                        type="button"
+                        class="meeting-tab"
+                        data-meeting-type="Physical Meeting"
+                    >
+                        Physical Meeting
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        <!-- ================= TABLE ================= -->
+
+        <div class="meeting-table-container">
+
+            <table class="meeting-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Meeting No.</th>
+
+                        <th>
+                            Project Name
+                        </th>
+
+                        <th>Representative Name</th>
+
+                        <th>No. of Participants</th>
+
+                        <th>Name of Participant</th>
+
+                        <th>Created Date</th>
+
+                        <th>Created Time</th>
+
+                        <th>Schedule Date</th>
+
+                        <th>Schedule Time</th>
+
+                        <th>Address</th>
+
+                        <th>Expenses</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="meetingTableBody">
+
+                    <!-- Meeting rows JavaScript se aayengi -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- ================= ADD MEETING BUTTON ================= -->
+
+        <button
+            type="button"
+            id="addMeetingButton"
+            class="add-meeting-button"
+            title="Add Meeting"
+        >
+            +
+        </button>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+                         ADD MEETING MODAL
+    =================================================== -->
+
+    <div id="meetingModal" class="meeting-modal">
+
+        <div class="meeting-modal-content">
+
+            <!-- Modal Header -->
+
+            <div class="meeting-modal-header">
+
+                <h2>Add Meeting</h2>
+
+                <button
+                    type="button"
+                    id="closeMeetingForm"
+                    class="meeting-modal-close"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+            <!-- ================= FORM ================= -->
+
+            <form id="addMeetingForm">
+
+                <div class="meeting-form-grid">
+
+
+                    <!-- Meeting Type -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="meetingType">
+                            Meeting Type
+                        </label>
+
+                        <select id="meetingType" required>
+
+                            <option value="Online Meeting">
+                                Online Meeting
+                            </option>
+
+                            <option value="Physical Meeting">
+                                Physical Meeting
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Meeting Number -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="meetingNo">
+                            Meeting No.
+                        </label>
+
+                        <input
+                            type="text"
+                            id="meetingNo"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Project Name -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="meetingProjectName">
+                            Project Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="meetingProjectName"
+                            placeholder="Enter Project Name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Representative Name -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="representativeName">
+                            Representative Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="representativeName"
+                            placeholder="Enter Representative Name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Number Of Participants -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="numberOfParticipants">
+                            No. of Participants
+                        </label>
+
+                        <input
+                            type="number"
+                            id="numberOfParticipants"
+                            placeholder="Enter Number"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Participant Names -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="participantNames">
+                            Name of Participant
+                        </label>
+
+                        <input
+                            type="text"
+                            id="participantNames"
+                            placeholder="Enter Participant Names"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Created Date -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="meetingCreatedDate">
+                            Created Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="meetingCreatedDate"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Created Time -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="meetingCreatedTime">
+                            Created Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="meetingCreatedTime"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Schedule Date -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="meetingScheduleDate">
+                            Schedule Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="meetingScheduleDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Schedule Time -->
+
+                    <div class="meeting-form-group">
+
+                        <label for="meetingScheduleTime">
+                            Schedule Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="meetingScheduleTime"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Address -->
+
+                    <div
+                        class="meeting-form-group"
+                        id="meetingAddressGroup"
+                    >
+
+                        <label for="meetingAddress">
+                            Address
+                        </label>
+
+                        <input
+                            type="text"
+                            id="meetingAddress"
+                            placeholder="Enter Meeting Address"
+                        >
+
+                    </div>
+
+
+                    <!-- Expenses -->
+
+                    <div
+                        class="meeting-form-group"
+                        id="meetingExpensesGroup"
+                    >
+
+                        <label for="meetingExpenses">
+                            Expenses
+                        </label>
+
+                        <input
+                            type="number"
+                            id="meetingExpenses"
+                            placeholder="Enter Expenses"
+                            min="0"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Form Buttons -->
+
+                <div class="meeting-form-actions">
+
+                    <button
+                        type="button"
+                        id="cancelMeetingForm"
+                        class="meeting-cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="meeting-save-button"
+                    >
+                        Save Meeting
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+                         SUCCESS POPUP
+    =================================================== -->
+
+    <div id="meetingSuccessPopup" class="meeting-success-popup">
+
+        <div class="meeting-success-content">
+
+            <div class="meeting-success-icon">
+                ✓
+            </div>
+
+            <h3>Meeting Added Successfully</h3>
+
+            <p>
+                Meeting has been added successfully.
+            </p>
+
+            <button
+                type="button"
+                id="meetingSuccessClose"
+            >
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="meeting.js"></script>
+
+</body>
+
+</html>

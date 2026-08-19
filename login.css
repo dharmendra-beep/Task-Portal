@@ -1,0 +1,1517 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   LOGIN PAGE
+======================================== */
+
+.login-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: #dcecff;
+}
+
+
+/* ========================================
+   BACKGROUND VIDEO
+======================================== */
+
+.background-video {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+
+    transition:
+        opacity 0.7s ease;
+}
+
+
+/* Light video */
+
+.light-video {
+    opacity: 1;
+}
+
+
+/* Dark video */
+
+.dark-video {
+    opacity: 0;
+}
+
+
+/* ========================================
+   VIDEO OVERLAY
+======================================== */
+
+.video-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 15, 35, 0.08),
+            rgba(0, 15, 35, 0.16)
+        );
+}
+
+
+/* ========================================
+   CINEMATIC MESSAGE
+======================================== */
+
+.hero-message {
+    position: absolute;
+
+    left: 8%;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 45%;
+    max-width: 650px;
+
+    z-index: 5;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   LIGHT MESSAGE
+======================================== */
+
+.light-message {
+    display: block;
+}
+
+
+/* ========================================
+   DARK MESSAGE
+======================================== */
+
+.dark-message {
+    display: none;
+}
+
+
+/* ========================================
+   MESSAGE LABEL
+======================================== */
+
+.message-label {
+    margin-bottom: 14px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    text-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* ========================================
+   MESSAGE HEADING
+======================================== */
+
+.hero-message h2 {
+    font-size:
+        clamp(38px, 4vw, 62px);
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.32);
+}
+
+
+/* ========================================
+   MESSAGE LINE
+======================================== */
+
+.message-line {
+    width: 75px;
+    height: 4px;
+
+    margin:
+        25px 0 20px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            rgba(255, 255, 255, 0.08)
+        );
+
+    box-shadow:
+        0 3px 12px
+        rgba(255, 255, 255, 0.18);
+}
+
+
+/* ========================================
+   MESSAGE DESCRIPTION
+======================================== */
+
+.message-description {
+    max-width: 400px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color:
+        rgba(255, 255, 255, 0.90);
+
+    text-shadow:
+        0 3px 15px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* ========================================
+   LOGIN CARD
+======================================== */
+
+.login-card {
+    position: absolute;
+
+    top: 50%;
+    right: 8%;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 5;
+
+    width: min(440px, 32vw);
+
+    max-height:
+        calc(100vh - 50px);
+
+    padding:
+        28px 38px 25px;
+
+    overflow: auto;
+
+    border-radius: 22px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.42);
+
+    background:
+        rgba(255, 255, 255, 0.20);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.18);
+
+    color: #18233e;
+
+    transition:
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 11px;
+}
+
+
+/* ========================================
+   BRAND LOGO
+======================================== */
+
+.brand-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #3976ed;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(55, 111, 235, 0.20)
+        );
+}
+
+.brand-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+.brand-content {
+    text-align: left;
+}
+
+.brand-content h1 {
+    font-size: 23px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    color: #1b2944;
+}
+
+.brand-content h1 span {
+    color: #5264e8;
+}
+
+.brand-content p {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #596982;
+}
+
+
+/* ========================================
+   DECORATIVE DOTS
+======================================== */
+
+.login-decoration {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin:
+        17px auto 22px;
+}
+
+.login-decoration span {
+    width: 42px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #5e6bea
+        );
+}
+
+.login-decoration span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #5e6bea,
+            transparent
+        );
+}
+
+.login-decoration i {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #584be5;
+
+    box-shadow:
+        0 0 8px
+        rgba(88, 75, 229, 0.35);
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.login-form {
+    width: 100%;
+}
+
+
+/* ========================================
+   INPUT GROUP
+======================================== */
+
+.input-group {
+    position: relative;
+
+    width: 100%;
+
+    height: 48px;
+
+    margin-bottom: 13px;
+}
+
+
+/* ========================================
+   INPUT ICON
+======================================== */
+
+.input-icon {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    width: 19px;
+    height: 19px;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 2;
+
+    color: #71819c;
+
+    pointer-events: none;
+}
+
+.input-icon svg {
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.input-group input {
+    width: 100%;
+    height: 100%;
+
+    padding:
+        0 43px;
+
+    border:
+        1px solid
+        rgba(130, 147, 174, 0.35);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.62);
+
+    color: #1d2940;
+
+    font-size: 13px;
+
+    transition:
+        0.25s ease;
+}
+
+.input-group input::placeholder {
+    color: #5f6e87;
+}
+
+.input-group input:focus {
+    border-color: #5474e9;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(72, 105, 231, 0.12);
+}
+
+
+/* ========================================
+   PASSWORD TOGGLE
+======================================== */
+
+.password-toggle {
+    position: absolute;
+
+    right: 13px;
+    top: 50%;
+
+    width: 22px;
+    height: 22px;
+
+    padding: 0;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #667792;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.password-toggle svg {
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+.password-toggle:hover {
+    color: #4b61df;
+}
+
+
+/* ========================================
+   FORM OPTIONS
+======================================== */
+
+.form-options {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin:
+        4px 1px 17px;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   REMEMBER ME
+======================================== */
+
+.remember-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #596982;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.remember-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.custom-checkbox {
+    width: 14px;
+    height: 14px;
+
+    border:
+        1.5px solid
+        #9aa8be;
+
+    border-radius: 3px;
+
+    background:
+        rgba(255, 255, 255, 0.45);
+
+    transition:
+        0.2s ease;
+}
+
+.remember-option input:checked
++ .custom-checkbox {
+    background: #3978ed;
+
+    border-color: #3978ed;
+
+    box-shadow:
+        inset 0 0 0 3px
+        rgba(255, 255, 255, 0.8);
+}
+
+
+/* ========================================
+   FORGOT PASSWORD
+======================================== */
+
+.form-options a {
+    color: #4e4be3;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   SIGN IN BUTTON
+======================================== */
+
+.sign-in-button {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #3479ed,
+            #6248e8
+        );
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 22px
+        rgba(73, 80, 218, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.sign-in-button:hover {
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 12px 27px
+        rgba(73, 80, 218, 0.35);
+}
+
+.sign-in-button:active {
+    transform:
+        translateY(0);
+}
+
+.sign-in-arrow {
+    font-size: 21px;
+
+    line-height: 1;
+}
+
+
+/* ========================================
+   OR DIVIDER
+======================================== */
+
+.or-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin:
+        17px 0;
+}
+
+.or-divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(90, 105, 130, 0.25);
+}
+
+.or-divider p {
+    color: #68768d;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   GOOGLE BUTTON
+======================================== */
+
+.google-button {
+    width: 100%;
+    height: 46px;
+
+    border:
+        1px solid
+        rgba(120, 138, 164, 0.32);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    color: #26334b;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+.google-button:hover {
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    transform:
+        translateY(-1px);
+}
+
+.google-logo {
+    font-size: 18px;
+
+    font-weight: 800;
+
+    color: #4285f4;
+}
+
+
+/* ========================================
+   SIGN UP
+======================================== */
+
+.signup-text {
+    margin-top: 17px;
+
+    text-align: center;
+
+    color: #61708a;
+
+    font-size: 11px;
+}
+
+.signup-text a {
+    margin-left: 4px;
+
+    color: #5148df;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   THEME TOGGLE
+======================================== */
+
+.theme-toggle {
+    position: fixed;
+
+    top: 18px;
+    right: 20px;
+
+    z-index: 20;
+
+    height: 40px;
+
+    padding:
+        0 8px 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.75);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    color: #27344d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(30, 50, 90, 0.15);
+
+    transition:
+        0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform:
+        translateY(-1px);
+}
+
+.theme-toggle-icon {
+    font-size: 16px;
+}
+
+.theme-toggle-text {
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   SWITCH
+======================================== */
+
+.theme-switch {
+    position: relative;
+
+    width: 40px;
+    height: 24px;
+
+    border-radius: 20px;
+
+    background:
+        #6577a8;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 3px;
+}
+
+.theme-switch-circle {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 5px
+        rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* ========================================
+   PAGE MODE LABEL
+======================================== */
+
+.page-mode-label {
+    position: fixed;
+
+    left: 22px;
+    top: 18px;
+
+    z-index: 10;
+
+    height: 40px;
+
+    padding:
+        0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.72);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    color: #1e2b44;
+
+    box-shadow:
+        0 8px 25px
+        rgba(30, 50, 90, 0.12);
+
+    font-size: 12px;
+}
+
+.page-mode-icon {
+    font-size: 17px;
+
+    color: #f4a900;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode {
+    background: #071321;
+}
+
+
+/* ========================================
+   DARK VIDEO
+======================================== */
+
+body.dark-mode .light-video {
+    opacity: 0;
+}
+
+body.dark-mode .dark-video {
+    opacity: 1;
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+body.dark-mode .video-overlay {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(2, 8, 20, 0.10),
+            rgba(2, 8, 20, 0.20)
+        );
+}
+
+
+/* ========================================
+   DARK LOGIN CARD
+======================================== */
+
+body.dark-mode .login-card {
+    border-color:
+        rgba(150, 190, 230, 0.25);
+
+    background:
+        rgba(3, 18, 35, 0.20);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.42);
+
+    color: #edf3ff;
+}
+
+
+/* ========================================
+   DARK BRAND
+======================================== */
+
+body.dark-mode .brand-logo {
+    color: #4e8cff;
+}
+
+body.dark-mode .brand-content h1 {
+    color: #f1f5ff;
+}
+
+body.dark-mode .brand-content h1 span {
+    color: #6573ef;
+}
+
+body.dark-mode .brand-content p {
+    color: #b0bed2;
+}
+
+
+/* ========================================
+   DARK DECORATIVE DOTS
+======================================== */
+
+body.dark-mode .login-decoration span {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7181ff
+        );
+}
+
+body.dark-mode .login-decoration span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #7181ff,
+            transparent
+        );
+}
+
+body.dark-mode .login-decoration i {
+    background: #6b61f0;
+}
+
+
+/* ========================================
+   DARK INPUT
+======================================== */
+
+body.dark-mode .input-group input {
+    border-color:
+        rgba(151, 180, 216, 0.35);
+
+    background:
+        rgba(8, 20, 35, 0.46);
+
+    color: #f1f5ff;
+}
+
+body.dark-mode .input-group input::placeholder {
+    color: #b1bfd2;
+}
+
+body.dark-mode .input-group input:focus {
+    border-color: #6889ff;
+
+    background:
+        rgba(8, 20, 35, 0.60);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(79, 119, 255, 0.15);
+}
+
+body.dark-mode .input-icon {
+    color: #aebed4;
+}
+
+body.dark-mode .password-toggle {
+    color: #aebed4;
+}
+
+body.dark-mode .password-toggle:hover {
+    color: #7f9cff;
+}
+
+
+/* ========================================
+   DARK REMEMBER ME
+======================================== */
+
+body.dark-mode .remember-option {
+    color: #bac6d7;
+}
+
+body.dark-mode .custom-checkbox {
+    border-color: #8799b4;
+
+    background:
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* ========================================
+   DARK FORGOT PASSWORD
+======================================== */
+
+body.dark-mode .form-options a {
+    color: #8295ff;
+}
+
+
+/* ========================================
+   DARK DIVIDER
+======================================== */
+
+body.dark-mode .or-divider span {
+    background:
+        rgba(190, 207, 230, 0.20);
+}
+
+body.dark-mode .or-divider p {
+    color: #a9b6ca;
+}
+
+
+/* ========================================
+   DARK GOOGLE
+======================================== */
+
+body.dark-mode .google-button {
+    border-color:
+        rgba(161, 182, 210, 0.30);
+
+    background:
+        rgba(255, 255, 255, 0.84);
+
+    color: #17253d;
+}
+
+body.dark-mode .google-button:hover {
+    background:
+        rgba(255, 255, 255, 0.95);
+}
+
+
+/* ========================================
+   DARK SIGN UP
+======================================== */
+
+body.dark-mode .signup-text {
+    color: #aebbd0;
+}
+
+body.dark-mode .signup-text a {
+    color: #8794ff;
+}
+
+
+/* ========================================
+   DARK THEME TOGGLE
+======================================== */
+
+body.dark-mode .theme-toggle {
+    border-color:
+        rgba(121, 153, 191, 0.35);
+
+    background:
+        rgba(8, 22, 39, 0.72);
+
+    color: #e9f0ff;
+}
+
+body.dark-mode .theme-switch {
+    background: #202f55;
+}
+
+body.dark-mode .theme-switch-circle {
+    transform:
+        translateX(16px);
+}
+
+
+/* ========================================
+   DARK PAGE MODE LABEL
+======================================== */
+
+body.dark-mode .page-mode-label {
+    background:
+        rgba(7, 20, 35, 0.70);
+
+    border-color:
+        rgba(120, 154, 194, 0.35);
+
+    color: #edf3ff;
+}
+
+body.dark-mode .page-mode-icon {
+    color: #cbd4e8;
+}
+
+
+/* ========================================
+   DARK MODE MESSAGE
+======================================== */
+
+body.dark-mode .light-message {
+    display: none;
+}
+
+body.dark-mode .dark-message {
+    display: block;
+}
+
+
+/* ========================================
+   RESPONSIVE — TABLET / MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .login-page {
+        min-height: 100vh;
+
+        height: auto;
+
+        overflow-y: auto;
+
+        padding:
+            90px 25px 40px;
+    }
+
+
+    /* ------------------------------------
+       Message
+    ------------------------------------ */
+
+    .hero-message {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 100%;
+        max-width: 600px;
+
+        margin:
+            0 auto 35px;
+
+        text-align: center;
+    }
+
+    .message-line {
+        margin:
+            20px auto;
+    }
+
+    .message-description {
+        margin:
+            0 auto;
+    }
+
+
+    /* ------------------------------------
+       Login Card
+    ------------------------------------ */
+
+    .login-card {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        width: min(
+            440px,
+            100%
+        );
+
+        max-height: none;
+
+        margin:
+            0 auto;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVE — SMALL MOBILE
+======================================== */
+
+@media (max-width: 500px) {
+
+    .login-page {
+        padding:
+            80px 15px 30px;
+    }
+
+
+    .hero-message {
+        margin-bottom: 25px;
+    }
+
+
+    .message-label {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hero-message h2 {
+        font-size:
+            clamp(34px, 11vw, 48px);
+
+        letter-spacing:
+            -1.5px;
+    }
+
+
+    .message-description {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    .login-card {
+        padding:
+            25px 22px;
+    }
+
+
+    .page-mode-label {
+        left: 12px;
+
+        top: 12px;
+
+        height: 36px;
+
+        padding:
+            0 11px;
+
+        font-size: 10px;
+    }
+
+
+    .theme-toggle {
+        right: 12px;
+
+        top: 12px;
+
+        height: 36px;
+
+        padding:
+            0 7px 0 10px;
+
+        font-size: 10px;
+    }
+
+
+    .theme-switch {
+        width: 36px;
+
+        height: 22px;
+    }
+
+
+    .theme-switch-circle {
+        width: 16px;
+
+        height: 16px;
+    }
+
+
+    body.dark-mode
+    .theme-switch-circle {
+        transform:
+            translateX(14px);
+    }
+
+}
+
+
+/* ========================================
+   SHORT DESKTOP SCREEN
+======================================== */
+
+@media (max-height: 700px) and (min-width: 901px) {
+
+    .login-card {
+        padding:
+            20px 32px;
+    }
+
+
+    .brand-logo {
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .brand-content h1 {
+        font-size: 20px;
+    }
+
+
+    .login-decoration {
+        margin:
+            12px auto 16px;
+    }
+
+
+    .input-group {
+        height: 43px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .form-options {
+        margin-bottom: 12px;
+    }
+
+
+    .sign-in-button {
+        height: 44px;
+    }
+
+
+    .or-divider {
+        margin:
+            12px 0;
+    }
+
+
+    .google-button {
+        height: 42px;
+    }
+
+
+    .signup-text {
+        margin-top: 12px;
+    }
+
+}

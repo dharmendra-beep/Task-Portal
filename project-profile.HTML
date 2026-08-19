@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-profile.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            CRM Portal
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item">
+                Dashboard
+            </a>
+
+            <a href="task.html" class="menu-item">
+                Task
+            </a>
+
+            <a href="meeting.html" class="menu-item">
+                Meeting
+            </a>
+
+            <a href="document.html" class="menu-item">
+                Document
+            </a>
+
+            <a href="project.html" class="menu-item active">
+                My Project
+            </a>
+            <a href="new-project.html" class="menu-item">
+               New Project
+           </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-bottom-icon"></div>
+
+            <div>
+                <div class="sidebar-bottom-title">
+                    Work Smarter,<br>
+                    Achieve Faster!
+                </div>
+
+                <div class="sidebar-bottom-text">
+                    Keep tracking, keep growing.
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header dashboard-header project-profile-header">
+
+    <div class="header-left">
+
+        <div class="dashboard-header-icon project-profile-header-icon">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <!-- Project Board -->
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="16"
+                    rx="2"
+                ></rect>
+
+                <!-- Header -->
+                <path
+                    d="M3 9h18"
+                ></path>
+
+                <!-- Project Columns -->
+                <path
+                    d="M9 9v11"
+                ></path>
+
+                <path
+                    d="M15 9v11"
+                ></path>
+
+                <!-- Progress -->
+                <path
+                    d="M5.5 14h1.5"
+                ></path>
+
+                <path
+                    d="M11 13h2"
+                ></path>
+
+                <path
+                    d="M17 12l1.5 1.5L20 12"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+        <div class="dashboard-header-text">
+
+            <div class="dashboard-title-row">
+
+                <h1>
+                    Project Management
+                </h1>
+
+                <span class="dashboard-title-line"></span>
+
+            </div>
+
+
+            <p>
+                Plan with clarity, track every milestone, and keep your projects moving forward. 🚀
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+
+        <div class="dashboard-date">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+            </svg>
+
+
+            <div>
+
+                <strong>
+                    19 Aug 2026
+                </strong>
+
+                <span>
+                    Tuesday
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-admin">
+
+            <div class="dashboard-admin-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="4"
+                    ></circle>
+
+                    <path
+                        d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+                    ></path>
+
+                </svg>
+
+            </div>
+
+
+            <div class="dashboard-admin-text">
+
+                <strong>
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+
+            <span class="dashboard-admin-arrow">
+                ▼
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+        <!-- ================= PROFILE CONTENT ================= -->
+
+        <section class="content project-profile-content">
+
+
+            <!-- ================= PROJECT DETAILS ================= -->
+
+            <!-- ================= PROJECT DETAILS ================= -->
+
+<div class="project-details-section">
+
+    <div class="project-details-header">
+
+        <h2>
+            Project Details
+        </h2>
+
+        <button
+            type="button"
+            id="editProjectProfileButton"
+            class="edit-project-profile-button"
+            title="Edit Project Profile"
+        >
+            ✎
+        </button>
+
+    </div>
+
+
+    <div class="project-details-grid">
+
+
+        <!-- COMPANY NAME -->
+
+        <div class="project-detail-item">
+
+            <label class="project-detail-label">
+                Company Name
+            </label>
+
+            <input
+                type="text"
+                id="profileCompanyName"
+                class="project-detail-input"
+                placeholder="Enter Company Name"
+                disabled
+            >
+
+        </div>
+
+
+        <!-- PROJECT NAME -->
+
+        <div class="project-detail-item">
+
+            <label class="project-detail-label">
+                Project Name
+            </label>
+
+            <input
+                type="text"
+                id="profileProjectName"
+                class="project-detail-input"
+                placeholder="Enter Project Name"
+                disabled
+            >
+
+        </div>
+
+
+        <!-- CONTACT PERSON -->
+
+        <div class="project-detail-item">
+
+            <label class="project-detail-label">
+                Contact Person
+            </label>
+
+            <input
+                type="text"
+                id="profileContactPerson"
+                class="project-detail-input"
+                placeholder="Enter Contact Person"
+                disabled
+            >
+
+        </div>
+
+
+        <!-- TYPE OF PROJECT -->
+
+        <div class="project-detail-item">
+
+            <label class="project-detail-label">
+                Type of Project
+            </label>
+
+            <input
+                type="text"
+                id="profileProjectType"
+                class="project-detail-input"
+                placeholder="Enter Type of Project"
+                disabled
+            >
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SAVE BUTTON -->
+
+    <div
+        id="projectProfileSaveActions"
+        class="project-profile-save-actions"
+        style="display: none;"
+    >
+
+        <button
+            type="button"
+            id="cancelProjectProfileEdit"
+            class="project-profile-cancel-button"
+        >
+            Cancel
+        </button>
+
+        <button
+            type="button"
+            id="saveProjectProfile"
+            class="project-profile-save-button"
+        >
+            Save
+        </button>
+
+    </div>
+
+</div>
+
+
+            <!-- ================= COMMENTS ================= -->
+
+            <div class="project-comments-section">
+
+
+                <div class="project-comments-header">
+
+                    <h2>
+                        Comments
+                    </h2>
+
+                    <button
+                        type="button"
+                        id="addCommentButton"
+                        class="add-comment-button"
+                    >
+                        + Add Comment
+                    </button>
+
+                </div>
+
+
+
+                <!-- ================= COMMENTS TABLE ================= -->
+
+                <div class="comments-table-container">
+
+                    <table class="comments-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    S.No
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Time
+                                </th>
+
+                                <th>
+                                    Comment Of
+                                </th>
+
+                                <th>
+                                    Comment
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="commentsTableBody">
+
+                            <!-- Comments JavaScript se aayenge -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+                         ADD COMMENT MODAL
+    =================================================== -->
+
+    <div
+        id="commentModal"
+        class="comment-modal"
+    >
+
+        <div class="comment-modal-content">
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="comment-modal-header">
+
+                <h2>
+                    Add Comment
+                </h2>
+
+                <button
+                    type="button"
+                    id="closeCommentForm"
+                    class="comment-modal-close"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= COMMENT FORM ================= -->
+
+            <form id="addCommentForm">
+
+
+                <div class="comment-form-group">
+
+                    <label for="commentOf">
+                        Comment Of
+                    </label>
+
+                    <input
+                        type="text"
+                        id="commentOf"
+                        placeholder="Enter Name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="comment-form-group">
+
+                    <label for="commentText">
+                        Comment
+                    </label>
+
+                    <textarea
+                        id="commentText"
+                        placeholder="Enter Comment"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- FORM BUTTONS -->
+
+                <div class="comment-form-actions">
+
+                    <button
+                        type="button"
+                        id="cancelCommentForm"
+                        class="comment-cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="comment-save-button"
+                    >
+                        Save Comment
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="project-profile.js"></script>
+
+</body>
+
+</html>

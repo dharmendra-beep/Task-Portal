@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document Management</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="document.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Task Portal
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item">
+                Dashboard
+            </a>
+
+            <a href="task.html" class="menu-item">
+                Task
+            </a>
+
+            <a href="meeting.html" class="menu-item">
+                Meeting
+            </a>
+
+            <a href="document.html" class="menu-item active">
+                Document
+            </a>
+
+            <a href="project.html" class="menu-item">
+                My Project
+            </a>
+            <a href="new-project.html" class="menu-item">
+    New Project
+</a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-bottom-icon"></div>
+
+            <div>
+                <div class="sidebar-bottom-title">
+                    Work Smarter,<br>
+                    Achieve Faster!
+                </div>
+
+                <div class="sidebar-bottom-text">
+                    Keep tracking, keep growing.
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header dashboard-header document-header">
+
+    <div class="header-left">
+
+        <div class="dashboard-header-icon document-header-icon">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <!-- Document -->
+                <path
+                    d="M6 3h8l4 4v14H6z"
+                ></path>
+
+                <!-- Fold -->
+                <path
+                    d="M14 3v5h5"
+                ></path>
+
+                <!-- Document Lines -->
+                <line
+                    x1="9"
+                    y1="12"
+                    x2="15"
+                    y2="12"
+                ></line>
+
+                <line
+                    x1="9"
+                    y1="16"
+                    x2="15"
+                    y2="16"
+                ></line>
+
+            </svg>
+
+        </div>
+
+
+        <div class="dashboard-header-text">
+
+            <div class="dashboard-title-row">
+
+                <h1>
+                    Document Management
+                </h1>
+
+                <span class="dashboard-title-line"></span>
+
+            </div>
+
+
+            <p>
+                Keep your documents organized, accessible, and always up to date. 📄
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+
+        <div class="dashboard-date">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+            </svg>
+
+
+            <div>
+
+                <strong>
+                    19 Aug 2026
+                </strong>
+
+                <span>
+                    Tuesday
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-admin">
+
+            <div class="dashboard-admin-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="4"
+                    ></circle>
+
+                    <path
+                        d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+                    ></path>
+
+                </svg>
+
+            </div>
+
+
+            <div class="dashboard-admin-text">
+
+                <strong>
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+
+            <span class="dashboard-admin-arrow">
+                ▼
+            </span>
+
+             <!-- Logout Menu -->
+
+    <div
+        class="admin-dropdown"
+        id="adminDropdown"
+    >
+
+        <button
+            type="button"
+            id="logoutButton"
+        >
+
+            
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content document-content">
+
+
+            <!-- ================= TOP BAR ================= -->
+
+            <div class="document-topbar">
+
+
+                <!-- SEARCH -->
+
+                <div class="document-toolbar">
+
+                    <input
+                        type="text"
+                        id="documentSearch"
+                        placeholder="Search Project or Task ID..."
+                    >
+
+                    <button
+                        type="button"
+                        id="clearDocumentSearch"
+                        class="clear-document-search"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <!-- ADD DOCUMENT BUTTON -->
+
+                <button
+                    type="button"
+                    id="addDocumentButton"
+                    class="add-document-button"
+                >
+                    + Add Document
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= TABLE ================= -->
+
+            <div class="document-table-container">
+
+                <table class="document-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Project Name
+
+                            </th>
+
+                            <th>
+                                Task ID
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Time
+                            </th>
+
+                            <th>
+                                Contact Person
+                            </th>
+
+                            <th>
+                                Type of Task
+                            </th>
+
+                            <th>
+                                Document Type
+                            </th>
+
+                            <th>
+                                File Upload
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="documentTableBody">
+
+                        <!-- Documents JavaScript se aayenge -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+                         ADD DOCUMENT MODAL
+    =================================================== -->
+
+    <div
+        id="documentModal"
+        class="document-modal"
+    >
+
+        <div class="document-modal-content">
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="document-modal-header">
+
+                <h2>
+                    Add Document
+                </h2>
+
+                <button
+                    type="button"
+                    id="closeDocumentForm"
+                    class="document-modal-close"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= FORM ================= -->
+
+            <form id="addDocumentForm">
+
+
+                <div class="document-form-grid">
+
+
+                    <!-- PROJECT NAME -->
+
+                    <div class="document-form-group">
+
+                        <label for="documentProjectName">
+                            Project Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="documentProjectName"
+                            placeholder="Enter Project Name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- TASK ID -->
+
+                    <div class="document-form-group">
+
+                        <label for="documentTaskId">
+                            Task ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="documentTaskId"
+                            placeholder="Enter Task ID"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- DATE -->
+
+                    <div class="document-form-group">
+
+                        <label for="documentDate">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="documentDate"
+                            readonly
+                        >
+
+                    </div>
+
+
+
+                    <!-- TIME -->
+
+                    <div class="document-form-group">
+
+                        <label for="documentTime">
+                            Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="documentTime"
+                            readonly
+                        >
+
+                    </div>
+
+
+
+                    <!-- CONTACT PERSON -->
+
+                    <div class="document-form-group">
+
+                        <label for="documentContactPerson">
+                            Contact Person
+                        </label>
+
+                        <input
+                            type="text"
+                            id="documentContactPerson"
+                            placeholder="Enter Contact Person"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- TYPE OF TASK -->
+
+                    <div class="document-form-group">
+
+                        <label for="documentTaskType">
+                            Type of Task
+                        </label>
+
+                        <select
+                            id="documentTaskType"
+                            required
+                        >
+
+                            <option value="">
+                                Select Type of Task
+                            </option>
+
+                            <option value="Development">
+                                Development
+                            </option>
+
+                            <option value="Design">
+                                Design
+                            </option>
+
+                            <option value="Testing">
+                                Testing
+                            </option>
+
+                            <option value="Bug Fixing">
+                                Bug Fixing
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- DOCUMENT TYPE -->
+
+                    <div class="document-form-group">
+
+                        <label for="documentType">
+                            Document Type
+                        </label>
+
+                        <select
+                            id="documentType"
+                            required
+                        >
+
+                            <option value="">
+                                Select Document Type
+                            </option>
+
+                            <option value="Image">
+                                Image
+                            </option>
+
+                            <option value="Screenshot">
+                                Screenshot
+                            </option>
+
+                            <option value="Video">
+                                Video
+                            </option>
+
+                            <option value="PDF">
+                                PDF
+                            </option>
+
+                            <option value="Document">
+                                Document
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- FILE -->
+
+                    <div class="document-form-group">
+
+                        <label for="documentFile">
+                            File
+                        </label>
+
+                        <input
+                            type="file"
+                            id="documentFile"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FORM BUTTONS -->
+
+                <div class="document-form-actions">
+
+                    <button
+                        type="button"
+                        id="cancelDocumentForm"
+                        class="document-cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="document-save-button"
+                    >
+                        Save Document
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+                         SUCCESS POPUP
+    =================================================== -->
+
+    <div
+        id="documentSuccessPopup"
+        class="document-success-popup"
+    >
+
+        <div class="document-success-content">
+
+            <div class="document-success-icon">
+                ✓
+            </div>
+
+            <h3>
+                Document Added Successfully
+            </h3>
+
+            <p>
+                Document has been added successfully.
+            </p>
+
+            <button
+                type="button"
+                id="documentSuccessClose"
+            >
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="document.js"></script>
+
+</body>
+
+</html>

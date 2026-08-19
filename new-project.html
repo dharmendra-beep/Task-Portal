@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Project</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="new-project.css">
+    
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Task Portal
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item">
+                Dashboard
+            </a>
+
+            <a href="task.html" class="menu-item">
+                Task
+            </a>
+
+            <a href="meeting.html" class="menu-item">
+                Meeting
+            </a>
+
+            <a href="document.html" class="menu-item">
+                Document
+            </a>
+
+            <a href="project.html" class="menu-item">
+                My Project
+            </a>
+
+           <a href="new-project.html" class="menu-item new-project-menu-item active">
+
+    <span class="sidebar-icon">
+
+        <svg viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path>
+
+            <path d="M12 10v6"></path>
+
+            <path d="M9 13h6"></path>
+
+        </svg>
+
+    </span>
+
+    <span>
+        New Project
+    </span>
+
+</a>
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-bottom-icon"></div>
+
+            <div>
+
+                <div class="sidebar-bottom-title">
+                    Work Smarter,<br>
+                    Achieve Faster!
+                </div>
+
+                <div class="sidebar-bottom-text">
+                    Keep tracking, keep growing.
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header dashboard-header new-project-header">
+
+    <div class="header-left">
+
+        <div class="dashboard-header-icon new-project-header-icon">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <!-- Folder -->
+                <path
+                    d="M3 6.5a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                ></path>
+
+                <!-- Plus -->
+                <path
+                    d="M12 10v6"
+                ></path>
+
+                <path
+                    d="M9 13h6"
+                ></path>
+
+            </svg>
+
+        </div>
+
+
+        <div class="dashboard-header-text">
+
+            <div class="dashboard-title-row">
+
+                <h1>
+                    New Project
+                </h1>
+
+                <span class="dashboard-title-line"></span>
+
+            </div>
+
+
+            <p>
+                Start something great, build with purpose, and turn ideas into results. 🚀
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+
+        <div class="dashboard-date">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+            </svg>
+
+
+            <div>
+
+                <strong>
+                    19 Aug 2026
+                </strong>
+
+                <span>
+                    Tuesday
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-admin">
+
+            <div class="dashboard-admin-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="4"
+                    ></circle>
+
+                    <path
+                        d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+                    ></path>
+
+                </svg>
+
+            </div>
+
+
+            <div class="dashboard-admin-text">
+
+                <strong>
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+
+            <span class="dashboard-admin-arrow">
+                ▼
+            </span>
+
+             <!-- Logout Menu -->
+
+    <div
+        class="admin-dropdown"
+        id="adminDropdown"
+    >
+
+        <button
+            type="button"
+            id="logoutButton"
+        >
+
+            
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content new-project-content">
+
+
+            <!-- ================= TOP BAR ================= -->
+
+            <div class="new-project-topbar">
+
+                <div class="new-project-toolbar">
+
+                    <input
+                        type="text"
+                        id="newProjectSearch"
+                        placeholder="Search Project..."
+                    >
+
+                    <button
+                        type="button"
+                        id="clearNewProjectSearch"
+                        class="clear-new-project-search"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="addNewProjectButton"
+                    class="add-new-project-button"
+                >
+                    + New Project
+                </button>
+
+            </div>
+
+
+            <!-- ================= PROJECT TABLE ================= -->
+
+            <div class="new-project-table-container">
+
+                <table class="new-project-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Project Name
+
+                                <div class="new-project-filter">
+                                    <input
+                                        type="text"
+                                        id="newProjectNameSearch"
+                                        placeholder="Search Project"
+                                    >
+                                </div>
+
+                            </th>
+
+                            <th>
+                                Assign Date
+                            </th>
+
+                            <th>
+                                Estimation Time
+                            </th>
+
+
+                            <th>
+                                Sales Person
+                            </th>
+
+                            <th>
+                                Contact person
+                            </th>
+
+                            <th>
+                                Contact Number
+                            </th>
+
+                            <th>
+                                Assign Frontend Developer
+                            </th>
+
+                            <th>
+                                Backend Developer
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Check Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="newProjectTableBody">
+
+                        <!-- JavaScript se projects yahan aayenge -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+<!-- =========================
+     NEW PROJECT MODAL
+========================= -->
+
+<div
+    id="newProjectModal"
+    class="new-project-modal"
+>
+
+    <div class="new-project-form-container">
+
+
+        <!-- FORM HEADER -->
+
+        <div class="new-project-form-header">
+
+            <h2>
+                New Project
+            </h2>
+
+            <button
+                type="button"
+                id="closeNewProjectForm"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="newProjectForm">
+
+
+            <!-- Project Name -->
+
+            <div class="new-project-form-group">
+
+                <label for="newProjectName">
+                    Project Name
+                </label>
+
+                <input
+                    type="text"
+                    id="newProjectName"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Assign Date -->
+
+            <div class="new-project-form-group">
+
+                <label for="assignDate">
+                    Assign Date
+                </label>
+
+                <input
+                    type="date"
+                    id="assignDate"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Estimation Time -->
+
+            <div class="new-project-form-group">
+
+                <label for="estimationTime">
+                    Estimation Time
+                </label>
+
+                <input
+    type="text"
+    id="estimationTime"
+    placeholder="Automatically calculated"
+    readonly
+>
+            </div>
+
+            <div class="new-project-form-group">
+
+    <label for="estimationDate">
+        Estimation Date
+    </label>
+
+    <input
+        type="date"
+        id="estimationDate"
+        required
+    >
+
+</div>
+
+
+            <!-- Sales Person -->
+
+            <div class="new-project-form-group">
+
+                <label for="salesPerson">
+                    Sales Person
+                </label>
+
+                <input
+                    type="text"
+                    id="salesPerson"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Contact Name -->
+
+            <div class="new-project-form-group">
+
+                <label for="contactName">
+                    Contact Name
+                </label>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Contact Number -->
+
+            <div class="new-project-form-group">
+
+                <label for="contactNumber">
+                    Contact Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="contactNumber"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Frontend Developer -->
+
+            <div class="new-project-form-group">
+
+                <label for="frontendDeveloper">
+                    Assign Frontend Developer
+                </label>
+
+                <input
+                    type="text"
+                    id="frontendDeveloper"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Backend Developer -->
+
+            <div class="new-project-form-group">
+
+                <label for="backendDeveloper">
+                    Backend Developer
+                </label>
+
+                <input
+                    type="text"
+                    id="backendDeveloper"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Status -->
+
+            <div class="new-project-form-group">
+
+                <label for="projectStatus">
+                    Status
+                </label>
+
+                <select id="projectStatus" required>
+    <option value="Assigned">Assigned</option>
+</select>
+            </div>
+
+
+            <!-- FORM BUTTONS -->
+
+            <div class="new-project-form-actions">
+
+                <button
+                    type="button"
+                    id="cancelNewProjectForm"
+                    class="new-project-cancel-button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="new-project-save-button"
+                >
+                    Save Project
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+        </section>
+
+    </main>
+
+    
+    <!-- =========================
+         PROJECT SUCCESS POPUP
+    ========================= -->
+
+    <div
+        id="newProjectSuccessPopup"
+        class="new-project-success-popup"
+    >
+
+        <div class="new-project-success-content">
+
+            <div class="new-project-success-icon">
+                ✓
+            </div>
+
+            <h3>
+                Project Saved Successfully
+            </h3>
+
+            <p>
+                The new project has been added successfully.
+            </p>
+
+            <button
+                type="button"
+                id="newProjectSuccessClose"
+            >
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="./main.js"></script>
+    <script src="./new-project.js"></script>
+    
+
+</body>
+
+</html>
