@@ -1,759 +1,648 @@
-/* =========================
-   PROJECT PROFILE
-========================= */
+/* =========================================================
+   PROJECT PROFILE CSS
+   ========================================================= */
 
-.project-profile-content {
-    padding-top: 12px;
-}
-
-
-/* =========================
-   PROJECT DETAILS
-========================= */
-
-.project-details-section {
-    width: 100%;
-
-    padding: 24px;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 9px;
-
+* {
     box-sizing: border-box;
-
-    margin-bottom: 25px;
 }
 
-/* =========================
-   PROJECT DETAILS HEADER
-========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
 
-.project-details-header {
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.main-content {
+    margin-left: 240px;
+    min-height: 100vh;
+    padding: 24px 30px 40px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    min-height: 82px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.dashboard-header-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-header-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.header-left p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PROFILE CONTAINER
+   ========================================================= */
+
+.project-profile-container {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+/* =========================================================
+   PROJECT INFORMATION
+   ========================================================= */
+
+.project-profile-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.project-profile-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 22px;
 }
 
-.project-details-header h2 {
+.project-profile-header h2 {
     margin: 0;
-    color: #1f2937;
-    font-size: 20px;
-}
-
-
-/* =========================
-   EDIT PROFILE BUTTON
-========================= */
-
-.edit-project-profile-button {
-    width: 34px;
-    height: 34px;
-
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-
-    background: #ffffff;
-    color: #374151;
-
     font-size: 18px;
-    line-height: 1;
+}
 
-    cursor: pointer;
+.project-profile-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
 
+.profile-field {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: all 0.2s ease;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.edit-project-profile-button:hover {
-    background: #f3f4f6;
-    color: #2563eb;
-}
-
-
-/* =========================
-   PROFILE INPUT
-========================= */
-
-.project-detail-input {
-    width: 100%;
-    height: 36px;
-
-    padding: 0 10px;
-
-    border: 1px solid transparent;
-    border-radius: 6px;
-
-    background: transparent;
-    color: #111827;
-
-    font-size: 15px;
+.profile-field label {
+    font-size: 13px;
     font-weight: 600;
+    color: #4b5563;
+}
 
+.profile-field input {
+    width: 100%;
+    height: 42px;
+    padding: 9px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #f9fafb;
+    color: #111827;
     outline: none;
-
-    box-sizing: border-box;
 }
 
-.project-detail-input:disabled {
-    cursor: default;
-}
-
-
-/* Editable state */
-
-.project-detail-input:not(:disabled) {
-    border-color: #d1d5db;
+.profile-field input:not(:disabled) {
     background: #ffffff;
-}
-
-.project-detail-input:not(:disabled):focus {
     border-color: #2563eb;
-
-    box-shadow:
-        0 0 0 2px rgba(37, 99, 235, 0.1);
 }
 
+.project-profile-edit-button {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    background: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+}
 
-/* =========================
-   SAVE / CANCEL ACTIONS
-========================= */
+.project-profile-edit-button:hover {
+    opacity: 0.9;
+}
 
 .project-profile-save-actions {
     display: flex;
     justify-content: flex-end;
-
     gap: 10px;
-
     margin-top: 20px;
-    padding-top: 18px;
-
-    border-top: 1px solid #e5e7eb;
 }
 
-.project-profile-cancel-button,
-.project-profile-save-button {
-    padding: 8px 17px;
-
-    border-radius: 6px;
-
-    font-size: 13px;
-    font-weight: 600;
-
+.project-profile-save-button,
+.project-profile-cancel-button {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
     cursor: pointer;
+    font-weight: 600;
+}
+
+.project-profile-save-button {
+    background: #2563eb;
+    color: #ffffff;
 }
 
 .project-profile-cancel-button {
-    border: 1px solid #d1d5db;
-
-    background: #ffffff;
+    background: #e5e7eb;
     color: #374151;
 }
 
-.project-profile-cancel-button:hover {
+
+/* =========================================================
+   PROJECT STATUS
+   ========================================================= */
+
+.project-status-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.project-status-header {
+    margin-bottom: 20px;
+}
+
+.project-status-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.project-status-content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.project-status-item {
+    min-height: 75px;
+    padding: 14px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.project-status-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.project-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.project-status-badge.assigned {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.project-status-badge.in-process {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.project-status-badge.closed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+
+/* =========================================================
+   COMMENTS
+   ========================================================= */
+
+.comments-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.comments-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.comments-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.comments-header p {
+    margin: 5px 0 0;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.comments-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comments-search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.comments-search-input {
+    width: 230px;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 12px;
+    outline: none;
+}
+
+.comments-search-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.comments-search-clear {
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.comments-search-clear:hover {
     background: #f3f4f6;
 }
 
-.project-profile-save-button {
-    border: 1px solid #2563eb;
-
-    background: #2563eb;
-    color: #ffffff;
-}
-
-.project-profile-save-button:hover {
-    background: #1d4ed8;
-}
-
-
-
-/* =========================
-   DETAILS GRID
-========================= */
-
-.project-details-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 20px;
-}
-
-.project-detail-item {
-    min-height: 65px;
-
-    padding: 14px 16px;
-
-    background: #f8fafc;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 7px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    box-sizing: border-box;
-}
-
-.project-detail-label {
-    margin-bottom: 6px;
-
-    color: #6b7280;
-
-    font-size: 12px;
-
-    font-weight: 600;
-}
-
-.project-detail-value {
-    color: #111827;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    word-break: break-word;
-}
-
-
-/* =========================
-   COMMENTS SECTION
-========================= */
-
-.project-comments-section {
-    width: 100%;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 9px;
-
-    box-sizing: border-box;
-}
-
-
-/* =========================
-   COMMENTS HEADER
-========================= */
-
-.project-comments-header {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding: 18px 22px;
-
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.project-comments-header h2 {
-    margin: 0;
-
-    color: #1f2937;
-
-    font-size: 20px;
-}
-
-
-/* =========================
-   ADD COMMENT BUTTON
-========================= */
-
 .add-comment-button {
+    border: none;
+    border-radius: 8px;
     padding: 9px 16px;
-
-    border: 1px solid #2563eb;
-
-    border-radius: 7px;
-
     background: #2563eb;
-
     color: #ffffff;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
     cursor: pointer;
-
-    transition: all 0.2s ease;
+    font-weight: 600;
 }
 
 .add-comment-button:hover {
-    background: #1d4ed8;
+    opacity: 0.9;
 }
 
-
-/* =========================
-   COMMENTS TABLE
-========================= */
-
-.comments-table-container {
+.comments-table-wrapper {
     width: 100%;
-
     overflow-x: auto;
 }
 
 .comments-table {
     width: 100%;
-
     border-collapse: collapse;
 }
 
-.comments-table th {
-    padding: 13px 18px;
-
-    background: #f8fafc;
-
-    color: #1f2937;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    text-align: center;
-
-    white-space: nowrap;
-
+.comments-table th,
+.comments-table td {
+    padding: 12px 13px;
     border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 13px;
+}
+
+.comments-table th {
+    background: #f9fafb;
+    color: #4b5563;
+    font-weight: 700;
 }
 
 .comments-table td {
-    padding: 14px 18px;
+    color: #374151;
+}
 
-    color: #111827;
+.comment-context-menu {
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    min-width: 145px;
+    padding: 6px;
+    border: 1px solid rgba(120, 138, 164, 0.25);
+    border-radius: 9px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(25, 40, 70, 0.18);
+}
 
-    font-size: 14px;
+.comment-context-menu button {
+    width: 100%;
+    height: 36px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #26334b;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
 
+.comment-context-menu button:hover {
+    background: #eef3ff;
+    color: #315edc;
+}
+
+.comment-context-menu button:last-child:hover {
+    background: #fff0f0;
+    color: #d83b3b;
+}
+
+.comment-confirm-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 25, 45, 0.35);
+}
+
+.comment-confirm-box {
+    width: min(380px, calc(100vw - 40px));
+    padding: 28px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 25px 70px rgba(20, 35, 65, 0.25);
     text-align: center;
-
-    border-bottom: 1px solid #e5e7eb;
 }
 
-.comments-table tbody tr:hover {
-    background: #f8fafc;
+.comment-confirm-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.12);
+    color: #92400e;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.comment-confirm-box h3 {
+    margin: 0;
+    color: #1d2940;
+    font-size: 18px;
+}
+
+.comment-confirm-box p {
+    margin: 10px 0 22px;
+    color: #66748a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.comment-confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.comment-confirm-actions button {
+    min-width: 95px;
+    height: 38px;
+    padding: 0 16px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.comment-confirm-cancel {
+    border: 1px solid #d5dce7;
+    background: #ffffff;
+    color: #536176;
+}
+
+.comment-confirm-ok {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
 }
 
 
-/* =========================
+/* =========================================================
    COMMENT MODAL
-========================= */
+   ========================================================= */
 
 .comment-modal {
     position: fixed;
-
     inset: 0;
-
-    display: none;
-
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
     align-items: center;
-
     justify-content: center;
-
-    background: rgba(15, 23, 42, 0.55);
-
-    z-index: 1000;
+    padding: 20px;
+    z-index: 9999;
 }
 
 .comment-modal-content {
-    width: 600px;
-
-    max-width: 92%;
-
+    width: min(560px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
     background: #ffffff;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.25);
-
-    box-sizing: border-box;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
-
-
-/* =========================
-   COMMENT MODAL HEADER
-========================= */
 
 .comment-modal-header {
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
-    padding: 18px 22px;
-
-    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 20px;
 }
 
 .comment-modal-header h2 {
     margin: 0;
-
-    color: #1f2937;
-
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .comment-modal-close {
-    width: 32px;
-
-    height: 32px;
-
     border: none;
-
-    border-radius: 5px;
-
     background: transparent;
-
-    color: #6b7280;
-
-    font-size: 25px;
-
+    font-size: 26px;
+    line-height: 1;
     cursor: pointer;
-}
-
-.comment-modal-close:hover {
-    background: #f3f4f6;
-
-    color: #111827;
-}
-
-
-/* =========================
-   COMMENT FORM
-========================= */
-
-#addCommentForm {
-    padding: 22px;
+    color: #6b7280;
 }
 
 .comment-form-group {
     display: flex;
-
     flex-direction: column;
-
-    margin-bottom: 18px;
+    gap: 7px;
+    margin-bottom: 16px;
 }
 
 .comment-form-group label {
-    margin-bottom: 6px;
-
-    color: #374151;
-
     font-size: 13px;
-
     font-weight: 600;
+    color: #374151;
 }
 
-.comment-form-group input,
+.comment-form-group select,
 .comment-form-group textarea {
     width: 100%;
-
-    padding: 10px 11px;
-
     border: 1px solid #d1d5db;
-
-    border-radius: 6px;
-
-    background: #ffffff;
-
-    color: #111827;
-
-    font-size: 14px;
-
+    border-radius: 8px;
+    padding: 10px 12px;
     outline: none;
-
-    box-sizing: border-box;
-
-    font-family: inherit;
+    background: #ffffff;
 }
 
-.comment-form-group input {
-    height: 40px;
+.comment-form-group select:focus,
+.comment-form-group textarea:focus {
+    border-color: #2563eb;
 }
 
 .comment-form-group textarea {
-    min-height: 110px;
-
     resize: vertical;
 }
 
-.comment-form-group input:focus,
-.comment-form-group textarea:focus {
-    border-color: #2563eb;
-
-    box-shadow:
-        0 0 0 2px rgba(37, 99, 235, 0.1);
-}
-
-
-/* =========================
-   COMMENT FORM BUTTONS
-========================= */
-
-.comment-form-actions {
+.comment-modal-actions {
     display: flex;
-
     justify-content: flex-end;
-
     gap: 10px;
-
-    margin-top: 25px;
-
-    padding-top: 18px;
-
-    border-top: 1px solid #e5e7eb;
-}
-
-.comment-cancel-button,
-.comment-save-button {
-    padding: 9px 18px;
-
-    border-radius: 6px;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-}
-
-.comment-cancel-button {
-    border: 1px solid #d1d5db;
-
-    background: #ffffff;
-
-    color: #374151;
-}
-
-.comment-cancel-button:hover {
-    background: #f3f4f6;
-}
-
-.comment-save-button {
-    border: 1px solid #2563eb;
-
-    background: #2563eb;
-
-    color: #ffffff;
-}
-
-.comment-save-button:hover {
-    background: #1d4ed8;
+    margin-top: 20px;
 }
 
 
-/* =========================
+/* =========================================================
    RESPONSIVE
-========================= */
+   ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
-    .project-details-grid {
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        margin-left: 210px;
+    }
+
+    .project-status-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 18px;
+    }
+
+    .project-profile-content,
+    .project-status-content {
         grid-template-columns: 1fr;
     }
 
-    .project-comments-header {
+    .comments-header {
         align-items: flex-start;
-
-        gap: 15px;
-
         flex-direction: column;
     }
 }
 
-/* ==================================================
-   PROJECT MANAGEMENT HEADER
-================================================== */
+#logoutButton {
+    width: 72px;
+    height: 40px;
 
-.project-profile-header {
+    background: #ffffff;
+    color: #1f2937;
 
-    height: 84px !important;
+    border: none;
+    border-radius: 8px;
 
-    display: flex !important;
+    font-size: 14px;
+    font-weight: 600;
 
-    align-items: center !important;
+    cursor: pointer;
 
-    justify-content: space-between !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 
-    padding: 0 28px !important;
-
+    transition: 0.2s ease;
 }
 
-
-/* =========================
-   LEFT SIDE
-========================= */
-
-.project-profile-header .header-left {
-
-    display: flex !important;
-
-    align-items: center !important;
-
-    gap: 14px !important;
-
+#logoutButton:hover {
+    background: #f8fafc;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
 }
 
-
-/* =========================
-   PROJECT ICON
-========================= */
-
-.project-profile-header
-.project-profile-header-icon {
-
-    width: 44px !important;
-    height: 44px !important;
-
-    flex-shrink: 0;
-
-    display: flex !important;
-
-    align-items: center !important;
-
-    justify-content: center !important;
-
-    border-radius: 12px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #e8f1ff,
-            #dbeafe
-        );
-
-    color: #2563eb;
-
-}
-
-
-.project-profile-header
-.project-profile-header-icon svg {
-
-    width: 23px !important;
-    height: 23px !important;
-
-}
-
-
-/* =========================
-   TEXT
-========================= */
-
-.project-profile-header
-.dashboard-header-text {
-
-    display: flex !important;
-
-    flex-direction: column !important;
-
-    justify-content: center !important;
-
-}
-
-
-/* =========================
-   TITLE
-========================= */
-
-.project-profile-header
-.dashboard-title-row {
-
-    display: flex !important;
-
-    align-items: center !important;
-
-    gap: 10px !important;
-
-}
-
-
-.project-profile-header
-.dashboard-title-row h1 {
-
-    margin: 0 !important;
-
-    font-size: 27px !important;
-
-    line-height: 1.1 !important;
-
-    font-weight: 700 !important;
-
-    color: #0f172a;
-
-}
-
-
-/* =========================
-   BLUE LINE
-========================= */
-
-.project-profile-header
-.dashboard-title-line {
-
-    width: 28px;
-
-    height: 4px;
-
-    flex-shrink: 0;
-
-    border-radius: 10px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #2563eb,
-            #60a5fa
-        );
-
-}
-
-
-/* =========================
-   MESSAGE
-========================= */
-
-.project-profile-header
-.dashboard-header-text p {
-
-    margin: 4px 0 0 !important;
-
-    font-size: 13px !important;
-
-    line-height: 1.2 !important;
-
-    color: #64748b;
-
-}
-
-
-/* =========================
-   RIGHT SIDE
-========================= */
-
-.project-profile-header
-.header-right {
-
-    display: flex !important;
-
-    align-items: center !important;
-
-    gap: 22px !important;
-
+#logoutButton:active {
+    transform: translateY(1px);
 }

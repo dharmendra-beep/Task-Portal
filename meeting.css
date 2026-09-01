@@ -763,3 +763,381 @@
 
     border-color: #cbd5e1;
 }
+
+/* ========================================
+   MEETING CONTEXT MENU
+======================================== */
+
+.meeting-context-menu {
+
+    position: fixed;
+
+    display: none;
+
+    z-index: 9999;
+
+    min-width: 145px;
+
+    padding: 6px;
+
+    border:
+        1px solid
+        rgba(120, 138, 164, 0.25);
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    box-shadow:
+        0 12px 30px
+        rgba(25, 40, 70, 0.18);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+}
+
+
+/* ========================================
+   CONTEXT MENU BUTTON
+======================================== */
+
+.meeting-context-menu button {
+
+    width: 100%;
+
+    height: 36px;
+
+    padding:
+        0 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #26334b;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.meeting-context-menu button:hover {
+
+    background:
+        rgba(65, 103, 226, 0.10);
+
+    color: #315edc;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.meeting-context-menu button span:first-child {
+
+    width: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   DELETE HOVER
+======================================== */
+
+#deleteMeetingContext:hover {
+
+    background:
+        rgba(220, 60, 60, 0.10);
+
+    color: #d83b3b;
+}
+
+
+/* ========================================
+   MEETING CONFIRMATION MODAL
+======================================== */
+
+.meeting-confirm-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(15, 25, 45, 0.35);
+
+    backdrop-filter:
+        blur(5px);
+
+    -webkit-backdrop-filter:
+        blur(5px);
+}
+
+
+/* ========================================
+   CONFIRM BOX
+======================================== */
+
+.meeting-confirm-box {
+
+    width: min(
+        380px,
+        calc(100vw - 40px)
+    );
+
+    padding:
+        28px 28px 24px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.65);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    box-shadow:
+        0 25px 70px
+        rgba(20, 35, 65, 0.25);
+
+    text-align: center;
+
+    animation:
+        meetingConfirmIn
+        0.2s ease;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.meeting-confirm-icon {
+
+    width: 52px;
+    height: 52px;
+
+    margin:
+        0 auto 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(245, 158, 11, 0.12);
+
+    font-size: 25px;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.meeting-confirm-box h3 {
+
+    margin: 0;
+
+    color: #1d2940;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   MESSAGE
+======================================== */
+
+.meeting-confirm-box p {
+
+    margin:
+        10px 0 22px;
+
+    color: #66748a;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   ACTION BUTTONS
+======================================== */
+
+.meeting-confirm-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.meeting-confirm-actions button {
+
+    min-width: 95px;
+
+    height: 38px;
+
+    padding:
+        0 16px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+
+/* ========================================
+   CANCEL
+======================================== */
+
+.meeting-confirm-cancel {
+
+    border:
+        1px solid
+        #d5dce7;
+
+    background:
+        #ffffff;
+
+    color: #536176;
+}
+
+
+.meeting-confirm-cancel:hover {
+
+    background:
+        #f3f5f8;
+}
+
+
+/* ========================================
+   CONFIRM
+======================================== */
+
+.meeting-confirm-ok {
+
+    border: none;
+
+    background:
+        #2563eb;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 15px
+        rgba(37, 99, 235, 0.22);
+}
+
+
+.meeting-confirm-ok:hover {
+
+    background:
+        #1d4ed8;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes meetingConfirmIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.94)
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+.meeting-table {
+    border-collapse: collapse;
+}
+
+.meeting-table th,
+.meeting-table td {
+    border: 1px solid black;
+}

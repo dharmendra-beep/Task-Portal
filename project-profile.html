@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Profile</title>
+
+    <!-- Project Profile CSS -->
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-profile.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar">
+
+    <div class="logo">
+        Task Portal
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="index.html" class="menu-item">
+            Dashboard
+        </a>
+
+        <a href="task.html" class="menu-item">
+            Task
+        </a>
+
+        <a href="meeting.html" class="menu-item">
+            Meeting
+        </a>
+
+        <a href="document.html" class="menu-item">
+            Document
+        </a>
+
+        <a href="project.html" class="menu-item active">
+            My Project
+        </a>
+
+        <a href="new-project.html" class="menu-item">
+            New Project
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <div class="sidebar-bottom-icon"></div>
+
+        <div>
+            <div class="sidebar-bottom-title">
+                Work Smarter,<br>
+                Achieve Faster!
+            </div>
+
+            <div class="sidebar-bottom-text">
+                Keep tracking, keep growing.
+            </div>
+        </div>
+
+    </div>
+
+</aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="header dashboard-header profile-project-header">
+
+            <div class="header-left">
+
+                <div class="dashboard-header-icon profile-project-header-icon">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                        <path d="M3 9h18"></path>
+                        <path d="M9 9v12"></path>
+                        <path d="M12 13h6"></path>
+                        <path d="M12 16h4"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <h1>Project Profile</h1>
+                    <p>View and manage project details</p>
+                </div>
+
+            </div>
+
+
+<div class="header-right">
+
+
+        <div class="dashboard-date">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+
+                <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                ></rect>
+
+                <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                ></line>
+
+                <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                ></line>
+
+            </svg>
+
+
+            <div>
+
+                <strong>
+                    19 Aug 2026
+                </strong>
+
+                <span>
+                    Tuesday
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-admin" id="adminMenu">
+
+    <div class="dashboard-admin-icon">
+
+        <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+
+            <circle
+                cx="12"
+                cy="8"
+                r="4"
+            ></circle>
+
+            <path
+                d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"
+            ></path>
+
+        </svg>
+
+    </div>
+
+
+    <div class="dashboard-admin-text">
+
+        <strong>
+            Admin
+        </strong>
+
+        <span>
+            Administrator
+        </span>
+
+    </div>
+
+
+    <span class="dashboard-admin-arrow">
+        ▼
+    </span>
+
+
+    <!-- Logout Menu -->
+
+    <div
+        class="admin-dropdown"
+        id="adminDropdown"
+    >
+
+        <button
+            type="button"
+            id="logoutButton"
+        >
+
+            
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+</div>
+
+    </div>
+
+
+
+        </header>
+
+
+        <!-- PROJECT PROFILE -->
+        <section class="project-profile-container">
+
+            <!-- =========================
+                 PROJECT INFORMATION
+            ========================== -->
+            <div class="project-profile-card">
+
+                <div class="project-profile-header">
+                    <h2>Project Information</h2>
+
+                    <button
+                        type="button"
+                        id="editProjectProfileButton"
+                        class="project-profile-edit-button"
+                    >
+                        Edit
+                    </button>
+                </div>
+
+
+                <div class="project-profile-content">
+
+                    <!-- COMPANY -->
+                    <div class="profile-field">
+                        <label>Company Name</label>
+
+                        <input
+                            type="text"
+                            id="profileCompanyName"
+                            disabled
+                        >
+                    </div>
+
+
+                    <!-- PROJECT NAME -->
+                    <div class="profile-field">
+                        <label>Project Name</label>
+
+                        <input
+                            type="text"
+                            id="profileProjectName"
+                            disabled
+                        >
+                    </div>
+
+
+                    <!-- CONTACT PERSON -->
+                    <div class="profile-field">
+                        <label>Contact Person</label>
+
+                        <input
+                            type="text"
+                            id="profileContactPerson"
+                            disabled
+                        >
+                    </div>
+
+
+                    <!-- PROJECT TYPE -->
+                    <div class="profile-field">
+                        <label>Project Type</label>
+
+                        <input
+                            type="text"
+                            id="profileProjectType"
+                            disabled
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- SAVE / CANCEL -->
+                <div
+                    id="projectProfileSaveActions"
+                    class="project-profile-save-actions"
+                    style="display:none;"
+                >
+
+                    <button
+                        type="button"
+                        id="cancelProjectProfileEdit"
+                        class="project-profile-cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        id="saveProjectProfile"
+                        class="project-profile-save-button"
+                    >
+                        Save
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PROJECT STATUS / DETAILS
+            ========================== -->
+            <div class="project-status-section">
+
+                <div class="project-status-header">
+                    <h2>Project Details</h2>
+                </div>
+
+                <div class="project-status-content">
+
+                    <div class="project-status-item">
+                        <span class="project-status-label">
+                            Current Status
+                        </span>
+
+                        <span
+                            id="projectStatusBadge"
+                            class="project-status-badge"
+                        >
+                            Assigned
+                        </span>
+                    </div>
+
+
+                    <div class="project-status-item">
+                        <span class="project-status-label">
+                            Assign Date
+                        </span>
+
+                        <span id="profileAssignDate">-</span>
+                    </div>
+
+
+                    <div class="project-status-item">
+                        <span class="project-status-label">
+                            Estimation Date
+                        </span>
+
+                        <span id="profileEstimationDate">-</span>
+                    </div>
+
+
+                    <div class="project-status-item">
+                        <span class="project-status-label">
+                            Estimation Time
+                        </span>
+
+                        <span id="profileEstimationTime">-</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 COMMENTS
+            ========================== -->
+            <div class="comments-section">
+
+                <div class="comments-header">
+
+                    <div>
+                        <h2>Comments</h2>
+                        <p>Project activity and updates</p>
+                    </div>
+
+                    <div class="comments-header-actions">
+
+                        <div class="comments-search-wrapper">
+                            <input
+                                type="text"
+                                id="commentSearchInput"
+                                class="comments-search-input"
+                                placeholder="Search date or comment..."
+                                autocomplete="off"
+                            >
+
+                            <button
+                                type="button"
+                                id="clearCommentSearch"
+                                class="comments-search-clear"
+                            >
+                                Clear
+                            </button>
+                        </div>
+
+                        <button
+                            type="button"
+                            id="addCommentButton"
+                            class="add-comment-button"
+                        >
+                            Add Comment
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="comments-table-wrapper">
+
+                    <table class="comments-table">
+
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Pendency Type</th>
+                                <th>Comment</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="commentsTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         COMMENT MODAL
+    ========================== -->
+    <div
+        id="commentModal"
+        class="comment-modal"
+        style="display:none;"
+    >
+
+        <div class="comment-modal-content">
+
+            <div class="comment-modal-header">
+
+                <h2>Add Comment</h2>
+
+                <button
+                    type="button"
+                    id="closeCommentForm"
+                    class="comment-modal-close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="addCommentForm">
+
+                <div class="comment-form-group">
+
+                    <label for="pendencyType">
+                        Pendency Type
+                    </label>
+
+                    <select id="pendencyType">
+                        <option value="">Select Pendency Type</option>
+
+                        <option value="B.A Pendency">
+                            B.A Pendency
+                        </option>
+
+                        <option value="Client Side Pendency">
+                            Client Side Pendency
+                        </option>
+
+                        <option value="Development Pendency">
+                            Development Pendency
+                        </option>
+
+                        <option value="In Review">
+                            In Review
+                        </option>
+
+                        <option value="Testing Pendency">
+                            Testing Pendency
+                        </option>
+
+                        <option value="Complited">
+                            Complited
+                        </option>
+
+                        <option value="New Changes">
+                            New Changes
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="comment-form-group">
+
+                    <label for="commentStatus">
+                        Status
+                    </label>
+
+                    <select id="commentStatus">
+                        <option value="">
+                            Select Status
+                        </option>
+                    </select>
+
+                </div>
+
+
+                <div class="comment-form-group">
+
+                    <label for="commentText">
+                        Comment
+                    </label>
+
+                    <textarea
+                        id="commentText"
+                        rows="5"
+                        placeholder="Enter comment..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="comment-modal-actions">
+
+                    <button
+                        type="button"
+                        id="cancelCommentForm"
+                        class="project-profile-cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="project-profile-save-button"
+                    >
+                        Save Comment
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="commentContextMenu"
+        class="comment-context-menu"
+    >
+        <button
+            type="button"
+            id="editCommentContext"
+        >
+            Edit
+        </button>
+
+        <button
+            type="button"
+            id="deleteCommentContext"
+        >
+            Delete
+        </button>
+    </div>
+
+
+    <div
+        id="commentConfirmModal"
+        class="comment-confirm-modal"
+    >
+        <div class="comment-confirm-box">
+            <div
+                id="commentConfirmIcon"
+                class="comment-confirm-icon"
+            >
+                !
+            </div>
+
+            <h3 id="commentConfirmTitle">
+                Confirm
+            </h3>
+
+            <p id="commentConfirmMessage">
+                Are you sure?
+            </p>
+
+            <div class="comment-confirm-actions">
+                <button
+                    type="button"
+                    id="commentConfirmCancel"
+                    class="comment-confirm-cancel"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    id="commentConfirmOk"
+                    class="comment-confirm-ok"
+                >
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================
+         PROJECT PROFILE JS
+    ========================== -->
+    <script src="./project-profile.js"></script>
+
+</body>
+</html>

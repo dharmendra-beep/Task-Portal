@@ -1115,3 +1115,22 @@ if (logoutButton) {
     );
 
 }
+
+
+const currentDate = new Date();
+
+const dateElement = document.querySelector('.dashboard-date strong');
+const dayElement = document.querySelector('.dashboard-date span');
+
+const dateOptions = {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+};
+
+const dayOptions = {
+    weekday: 'long'
+};
+
+dateElement.textContent = currentDate.toLocaleDateString('en-GB', dateOptions);
+dayElement.textContent = currentDate.toLocaleDateString('en-US', dayOptions);

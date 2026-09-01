@@ -594,20 +594,46 @@
 
                 <div class="project-comments-header">
 
-                    <h2>
-                        Comments
-                    </h2>
+    <h2>
+        Comments
+    </h2>
 
 
-                    <button
-                        type="button"
-                        id="addCommentButton"
-                        class="add-comment-button"
-                    >
-                        + Add Comment
-                    </button>
+    <div class="comments-header-actions">
 
-                </div>
+        <div class="comments-search-wrapper">
+
+            <input
+                type="text"
+                id="commentsSearchInput"
+                class="comments-search-input"
+                placeholder="Search date or comment..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="clearCommentsSearch"
+                class="comments-search-clear"
+                title="Clear Search"
+            >
+                Clear
+            </button>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="addCommentButton"
+            class="add-comment-button"
+        >
+            + Add Comment
+        </button>
+
+    </div>
+
+</div>
 
 
 
@@ -635,17 +661,84 @@
                                     Time
                                 </th>
 
-                                <th>
-                                    Pendency Type
-                                </th>
+                               <th class="comment-filter-header">
 
+    <div class="comment-filter-title">
+
+        <span>
+            Pendency Type
+        </span>
+
+        <button
+            type="button"
+            id="pendencyTypeFilterButton"
+            class="comment-filter-button"
+            title="Filter Pendency Type"
+        >
+            ▼
+        </button>
+
+    </div>
+
+
+    <div
+        id="pendencyTypeFilterMenu"
+        class="comment-filter-menu"
+    >
+
+        <button
+            type="button"
+            class="comment-filter-option"
+            data-filter-type="pendency"
+            data-filter-value=""
+        >
+            All
+        </button>
+
+    </div>
+
+</th>
                                 <th>
                                     Comment
                                 </th>
 
-                                <th>
-                                    Status
-                                </th>
+                               <th class="comment-filter-header">
+
+    <div class="comment-filter-title">
+
+        <span>
+            Status
+        </span>
+
+        <button
+            type="button"
+            id="commentStatusFilterButton"
+            class="comment-filter-button"
+            title="Filter Status"
+        >
+            ▼
+        </button>
+
+    </div>
+
+
+    <div
+        id="commentStatusFilterMenu"
+        class="comment-filter-menu"
+    >
+
+        <button
+            type="button"
+            class="comment-filter-option"
+            data-filter-type="status"
+            data-filter-value=""
+        >
+            All
+        </button>
+
+    </div>
+
+</th>
 
                             </tr>
 
@@ -729,37 +822,28 @@
                             Select Pendency Type
                         </option>
 
-                        <option value="Kick-off Call Pending">
-                            Kick-off Call Pending
+                        <option value="B.A Pendency">
+                            B.A Pendency
                         </option>
 
-                        <option value="Task Assigning Pending">
-                            Task Assigning Pending
+                        <option value="Development Pendency">
+                            Development Pendency
                         </option>
 
-                        <option value="Client Side Pending">
-                            Client Side Pending
-                        </option>
-
-                        <option value="Development Pending">
-                            Development Pending
-                        </option>
-
-                        <option value="Testing Pending">
-                            Testing Pending
-                        </option>
-
-                        <option value="Demo Pending">
-                            Demo Pending
-                        </option>
-
-                        <option value="Account Approval Pending">
-                            Account Approval Pending
+                        <option value="Client Side Pendency">
+                            Client Side Pendency
                         </option>
 
                         <option value="In Review">
                             In Review
                         </option>
+
+                        <option value="Testing Pendency">
+                            Testing Pendency
+                        </option>
+
+                        <option value="New Changes">New Changes</option>
+                        <option value="Complited">Complited</option>
 
                     </select>
 
@@ -845,6 +929,35 @@
                             Live
                         </option>
 
+                        <!-- Additional pending statuses -->
+                        <option value="Kick-off Call Pending">
+                            Kick-off Call Pending
+                        </option>
+
+                        <option value="Task Assigning Pending">
+                            Task Assigning Pending
+                        </option>
+
+                        <option value="Client Side Pending">
+                            Client Side Pending
+                        </option>
+
+                        <option value="Development Pending">
+                            Development Pending
+                        </option>
+
+                        <option value="Demo Pending">
+                            Demo Pending
+                        </option>
+
+                        <option value="Account Approval Pending">
+                            Account Approval Pending
+                        </option>
+
+                        <option value="In Review">
+                            In Review
+                        </option>
+
                     </select>
 
                 </div>
@@ -919,7 +1032,97 @@
         </div>
 
     </div>
+<!-- ========================================
+     NEW PROJECT PROFILE
+     RIGHT CLICK MENU
+======================================== -->
 
+<div
+    id="newProjectProfileContextMenu"
+    class="new-project-profile-context-menu"
+>
+
+    <button
+        type="button"
+        id="editNewProjectProfileContext"
+    >
+        <span>✏️</span>
+        <span>Edit</span>
+    </button>
+
+    <button
+        type="button"
+        id="deleteNewProjectProfileContext"
+    >
+        <span>🗑️</span>
+        <span>Delete</span>
+    </button>
+
+</div>
+
+
+<!-- ========================================
+     NEW PROJECT PROFILE
+     CONFIRMATION MODAL
+======================================== -->
+
+<div
+    id="newProjectProfileConfirmModal"
+    class="new-project-profile-confirm-modal"
+>
+
+    <div
+        class="new-project-profile-confirm-box"
+    >
+
+        <div
+            id="newProjectProfileConfirmIcon"
+            class="new-project-profile-confirm-icon"
+        >
+            ⚠️
+        </div>
+
+
+        <h3
+            id="newProjectProfileConfirmTitle"
+        >
+            Confirm Action
+        </h3>
+
+
+        <p
+            id="newProjectProfileConfirmMessage"
+        >
+            Are you sure you want to continue?
+        </p>
+
+
+        <div
+            class="new-project-profile-confirm-actions"
+        >
+
+            <button
+                type="button"
+                id="newProjectProfileConfirmCancel"
+                class="new-project-profile-confirm-cancel"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                id="newProjectProfileConfirmOk"
+                class="new-project-profile-confirm-ok"
+            >
+                Confirm
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 
     <!-- =========================

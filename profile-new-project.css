@@ -1218,3 +1218,881 @@
     gap: 22px !important;
 
 }
+
+/* ========================================
+   COMMENTS SEARCH
+======================================== */
+
+.comments-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.comments-search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.comments-search-input {
+    width: 230px;
+    height: 36px;
+    padding: 0 12px;
+
+    border: 1px solid #d7dee9;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #26334b;
+
+    font-size: 12px;
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.comments-search-input:focus {
+    border-color: #4b72df;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(75, 114, 223, 0.10);
+}
+
+
+.comments-search-clear {
+    height: 36px;
+    padding: 0 12px;
+
+    border: 1px solid #d7dee9;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #59677d;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.comments-search-clear:hover {
+    background: #f3f5f8;
+    color: #26334b;
+}
+
+
+/* ========================================
+   COMMENT FILTER HEADER
+======================================== */
+
+.comment-filter-header {
+    position: relative;
+}
+
+
+.comment-filter-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+/* ========================================
+   FILTER BUTTON
+======================================== */
+
+.comment-filter-button {
+    width: 20px;
+    height: 20px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 4px;
+
+    background: transparent;
+    color: #68768b;
+
+    font-size: 9px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.comment-filter-button:hover {
+    background: #e9eef7;
+    color: #315edc;
+}
+
+
+/* ========================================
+   FILTER MENU
+======================================== */
+
+.comment-filter-menu {
+    position: absolute;
+
+    top: calc(100% - 2px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    min-width: 190px;
+    max-height: 260px;
+
+    padding: 6px;
+
+    display: none;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+
+    border:
+        1px solid
+        rgba(120, 138, 164, 0.25);
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 30px
+        rgba(25, 40, 70, 0.18);
+}
+
+
+/* ========================================
+   FILTER OPTION
+======================================== */
+
+.comment-filter-option {
+    width: 100%;
+
+    min-height: 32px;
+
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #354258;
+
+    font-size: 11px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.comment-filter-option:hover {
+    background: #eef3ff;
+    color: #315edc;
+}
+
+
+/* ========================================
+   ACTIVE FILTER
+======================================== */
+
+.comment-filter-option.active {
+    background: #e8efff;
+    color: #315edc;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   FILTER SCROLLBAR
+======================================== */
+
+.comment-filter-menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.comment-filter-menu::-webkit-scrollbar-thumb {
+    background: #c9d2e1;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   RIGHT CLICK MENU
+======================================== */
+
+.new-project-profile-context-menu {
+
+    position: fixed;
+
+    display: none;
+
+    z-index: 9999;
+
+    min-width: 145px;
+
+    padding: 6px;
+
+    border:
+        1px solid
+        rgba(120, 138, 164, 0.25);
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 30px
+        rgba(25, 40, 70, 0.18);
+}
+
+
+.new-project-profile-context-menu button {
+
+    width: 100%;
+    height: 36px;
+
+    padding: 0 10px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #26334b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.new-project-profile-context-menu button:hover {
+    background: #eef3ff;
+    color: #315edc;
+}
+
+
+.new-project-profile-context-menu
+button:last-child:hover {
+    background: #fff0f0;
+    color: #d83b3b;
+}
+
+
+/* ========================================
+   CONFIRMATION MODAL
+======================================== */
+
+.new-project-profile-confirm-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(15, 25, 45, 0.35);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+
+.new-project-profile-confirm-box {
+
+    width: min(
+        380px,
+        calc(100vw - 40px)
+    );
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px
+        rgba(20, 35, 65, 0.25);
+
+    text-align: center;
+}
+
+
+.new-project-profile-confirm-icon {
+
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(245, 158, 11, 0.12);
+
+    font-size: 25px;
+}
+
+
+.new-project-profile-confirm-box h3 {
+
+    margin: 0;
+
+    color: #1d2940;
+
+    font-size: 18px;
+}
+
+
+.new-project-profile-confirm-box p {
+
+    margin: 10px 0 22px;
+
+    color: #66748a;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.new-project-profile-confirm-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.new-project-profile-confirm-actions button {
+
+    min-width: 95px;
+
+    height: 38px;
+
+    padding: 0 16px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.new-project-profile-confirm-cancel {
+
+    border: 1px solid #d5dce7;
+
+    background: #ffffff;
+
+    color: #536176;
+}
+
+
+.new-project-profile-confirm-ok {
+
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+/* ========================================
+   NEW PROJECT PROFILE
+   COMMENTS SEARCH
+======================================== */
+
+.comments-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comments-search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.comments-search-input {
+    width: 230px;
+    height: 36px;
+    padding: 0 12px;
+
+    border: 1px solid #d7dee9;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #26334b;
+
+    font-size: 12px;
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.comments-search-input:focus {
+    border-color: #4b72df;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(75, 114, 223, 0.10);
+}
+
+.comments-search-clear {
+    height: 36px;
+    padding: 0 12px;
+
+    border: 1px solid #d7dee9;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #59677d;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.comments-search-clear:hover {
+    background: #f3f5f8;
+    color: #26334b;
+}
+
+
+/* ========================================
+   COMMENT FILTER HEADER
+======================================== */
+
+.comment-filter-header {
+    position: relative;
+}
+
+.comment-filter-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+
+/* ========================================
+   FILTER BUTTON
+======================================== */
+
+.comment-filter-button {
+    width: 20px;
+    height: 20px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 4px;
+
+    background: transparent;
+    color: #68768b;
+
+    font-size: 9px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.comment-filter-button:hover {
+    background: #e9eef7;
+    color: #315edc;
+}
+
+
+/* ========================================
+   FILTER MENU
+======================================== */
+
+.comment-filter-menu {
+    position: absolute;
+
+    top: calc(100% - 2px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    min-width: 190px;
+    max-height: 260px;
+
+    padding: 6px;
+
+    display: none;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+
+    border:
+        1px solid
+        rgba(120, 138, 164, 0.25);
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 30px
+        rgba(25, 40, 70, 0.18);
+}
+
+
+/* ========================================
+   FILTER OPTION
+======================================== */
+
+.comment-filter-option {
+    width: 100%;
+    min-height: 32px;
+
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: transparent;
+    color: #354258;
+
+    font-size: 11px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.comment-filter-option:hover {
+    background: #eef3ff;
+    color: #315edc;
+}
+
+.comment-filter-option.active {
+    background: #e8efff;
+    color: #315edc;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   FILTER SCROLLBAR
+======================================== */
+
+.comment-filter-menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.comment-filter-menu::-webkit-scrollbar-thumb {
+    background: #c9d2e1;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   RIGHT CLICK MENU
+======================================== */
+
+.new-project-profile-context-menu {
+    position: fixed;
+
+    display: none;
+
+    z-index: 9999;
+
+    min-width: 145px;
+
+    padding: 6px;
+
+    border:
+        1px solid
+        rgba(120, 138, 164, 0.25);
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 30px
+        rgba(25, 40, 70, 0.18);
+}
+
+.new-project-profile-context-menu button {
+    width: 100%;
+    height: 36px;
+
+    padding: 0 10px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #26334b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.new-project-profile-context-menu button:hover {
+    background: #eef3ff;
+    color: #315edc;
+}
+
+.new-project-profile-context-menu
+button:last-child:hover {
+    background: #fff0f0;
+    color: #d83b3b;
+}
+
+
+/* ========================================
+   CONFIRMATION MODAL
+======================================== */
+
+.new-project-profile-confirm-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(15, 25, 45, 0.35);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+.new-project-profile-confirm-box {
+    width: min(
+        380px,
+        calc(100vw - 40px)
+    );
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px
+        rgba(20, 35, 65, 0.25);
+
+    text-align: center;
+}
+
+.new-project-profile-confirm-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(245, 158, 11, 0.12);
+
+    font-size: 25px;
+}
+
+.new-project-profile-confirm-box h3 {
+    margin: 0;
+
+    color: #1d2940;
+
+    font-size: 18px;
+}
+
+.new-project-profile-confirm-box p {
+    margin: 10px 0 22px;
+
+    color: #66748a;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   CONFIRMATION BUTTONS
+======================================== */
+
+.new-project-profile-confirm-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.new-project-profile-confirm-actions button {
+    min-width: 95px;
+
+    height: 38px;
+
+    padding: 0 16px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.new-project-profile-confirm-cancel {
+    border: 1px solid #d5dce7;
+
+    background: #ffffff;
+
+    color: #536176;
+}
+
+.new-project-profile-confirm-cancel:hover {
+    background: #f3f5f8;
+}
+
+.new-project-profile-confirm-ok {
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 15px
+        rgba(37, 99, 235, 0.22);
+}
+
+.new-project-profile-confirm-ok:hover {
+    background: #1d4ed8;
+}
+
+/* ========================================
+   FILTER OPTIONS - VERTICAL
+======================================== */
+
+.comment-filter-menu {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+}
+
+
+/* Jab JS menu ko open kare */
+.comment-filter-menu[style*="display: block"] {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+.comment-filter-option {
+    display: block !important;
+
+    width: 100% !important;
+    min-width: 100% !important;
+
+    box-sizing: border-box;
+
+    white-space: normal;
+
+    text-align: left;
+}

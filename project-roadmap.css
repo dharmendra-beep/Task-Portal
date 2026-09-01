@@ -3,364 +3,1097 @@
 ================================================== */
 
 .project-roadmap-content {
-    padding: 24px;
+    padding: 22px 24px 30px;
+    box-sizing: border-box;
 }
 
+
+/* ==================================================
+   PROJECT HEADER
+================================================== */
+
 .roadmap-project-bar {
+    width: 100%;
+    min-height: 74px;
+
+    padding: 15px 22px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 20px;
-    margin-bottom: 18px;
-    padding: 18px 22px;
-    background: linear-gradient(120deg, #ffffff 0%, #f8fbff 60%, #eef5ff 100%);
-    border: 1px solid #e2e8f0;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7ef;
     border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
 }
 
 .roadmap-project-label {
     display: block;
+
     margin-bottom: 4px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .08em;
+
+    color: #2563eb;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
     text-transform: uppercase;
-    color: #64748b;
 }
 
 .roadmap-project-bar h2 {
     margin: 0;
+
     color: #0f172a;
-    font-size: 22px;
+
+    font-size: 21px;
+    font-weight: 700;
 }
 
 .roadmap-project-meta {
     display: flex;
     align-items: center;
-    gap: 14px;
+
+    gap: 15px;
+
     color: #64748b;
+
     font-size: 12px;
 }
 
 .roadmap-current-status {
     padding: 6px 12px;
-    border-radius: 999px;
-    background: #dbeafe;
+
+    border-radius: 20px;
+
+    background: #eaf2ff;
+
     color: #2563eb;
+
+    font-size: 11px;
     font-weight: 700;
 }
 
-.roadmap-card {
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, .05);
+
+/* ==================================================
+   PENDENCY LEGEND
+================================================== */
+
+.pendency-legend-card {
+    margin-top: 12px;
+
+    padding: 13px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7ef;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.025);
 }
 
-.roadmap-card-header {
+.pendency-legend-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.pendency-legend-title strong {
+    color: #0f172a;
+
+    font-size: 15px;
+}
+
+.pendency-legend-title span {
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+.pendency-legend {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    flex-wrap: wrap;
+}
+
+.pendency-legend-item {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #475569;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.pendency-color {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+}
+
+.pendency-legend-item.ba .pendency-color {
+    background: #3b82f6;
+}
+
+.pendency-legend-item.development .pendency-color {
+    background: #22c55e;
+}
+
+.pendency-legend-item.client .pendency-color {
+    background: #f59e0b;
+}
+
+.pendency-legend-item.review .pendency-color {
+    background: #8b5cf6;
+}
+
+.pendency-legend-item.testing .pendency-color {
+    background: #ef4444;
+}
+
+
+/* ==================================================
+   ROADMAP CARD
+================================================== */
+
+.roadmap-card {
+    width: 100%;
+
+    margin-top: 12px;
+
+    overflow: hidden;
+    overflow: visible;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7ef;
+
+    border-radius: 13px;
+
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.035);
+}
+
+.roadmap-card-header {
+    min-height: 62px;
+
+    padding: 13px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     gap: 20px;
-    padding: 20px 22px;
-    border-bottom: 1px solid #e5e7eb;
+
+    border-bottom: 1px solid #e7ebf0;
 }
 
 .roadmap-card-header h2 {
-    margin: 0 0 5px;
-    font-size: 19px;
+    margin: 0;
+
     color: #0f172a;
+
+    font-size: 18px;
 }
 
 .roadmap-card-header p {
-    margin: 0;
-    font-size: 12px;
+    margin: 4px 0 0;
+
     color: #64748b;
+
+    font-size: 10px;
 }
 
-.roadmap-legend {
+.roadmap-status-legend {
     display: flex;
     align-items: center;
+
     gap: 14px;
-    flex-wrap: wrap;
-    font-size: 11px;
+
     color: #64748b;
+
+    font-size: 10px;
 }
 
-.roadmap-legend span {
-    display: inline-flex;
+.roadmap-status-legend span {
+    display: flex;
     align-items: center;
+
     gap: 5px;
 }
 
 .legend-dot {
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
+
     border-radius: 50%;
 }
 
-.legend-dot.completed { background: #22c55e; }
-.legend-dot.pending { background: #cbd5e1; }
-.legend-dot.overdue { background: #ef4444; }
-
-.roadmap-canvas {
-    position: relative;
-    min-height: 820px;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 50% 50%, rgba(37,99,235,.035), transparent 30%),
-        linear-gradient(#fff, #fbfdff);
+.legend-dot.completed {
+    background: #22c55e;
 }
 
-.roadmap-wires {
-    position: absolute;
-    inset: 0;
+.legend-dot.pending {
+    background: #cbd5e1;
+}
+
+.legend-dot.overdue {
+    background: #ef4444;
+}
+
+
+/* ==================================================
+   MAIN ROADMAP AREA
+================================================== */
+
+.roadmap-main-area {
     width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
 
-.roadmap-wire-path {
-    fill: none;
-    stroke: #cbd5e1;
-    stroke-width: 2;
-    vector-effect: non-scaling-stroke;
-}
+    min-height: 620px;
 
-.roadmap-wire-path.completed {
-    stroke: #22c55e;
-}
+    padding: 22px 28px;
 
-.roadmap-wire-path.overdue {
-    stroke: #ef4444;
-}
+    display: grid;
 
-.roadmap-center-node {
-    position: absolute;
-    left: 17%;
-    top: 50%;
-    width: 220px;
-    height: 220px;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
+    grid-template-columns: 36% 64%;
 
-.roadmap-center-ring {
-    width: 100%;
-    height: 100%;
-    padding: 12px;
-    border: 2px solid rgba(37,99,235,.14);
-    border-radius: 50%;
     box-sizing: border-box;
-    background: rgba(255,255,255,.75);
-    box-shadow: 0 12px 40px rgba(37,99,235,.08);
 }
 
-.roadmap-center-circle {
-    width: 100%;
-    height: 100%;
+
+/* ==================================================
+   PIE SIDE
+================================================== */
+
+.roadmap-pie-section {
+    min-width: 0;
+
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 22px;
+
+    padding: 10px 15px 18px;
+
     box-sizing: border-box;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, #eff6ff, #dbeafe 70%, #bfdbfe);
-    border: 5px solid #fff;
-    box-shadow: inset 0 0 0 2px rgba(37,99,235,.15), 0 8px 25px rgba(37,99,235,.14);
 }
 
-.roadmap-center-circle span {
-    margin-bottom: 8px;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .14em;
+.roadmap-pie-wrapper {
+    width: 230px;
+    height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pendency-pie-chart {
+    width: 230px;
+    height: 230px;
+
+    display: block;
+
+    overflow: visible;
+}
+
+
+/* ==================================================
+   PIE PROJECT NAME
+================================================== */
+
+.roadmap-pie-project-name {
+    width: 100%;
+
+    margin-top: 13px;
+
+    text-align: center;
+}
+
+.roadmap-pie-project-name span {
+    display: block;
+
+    margin-bottom: 4px;
+
     color: #2563eb;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.1px;
 }
 
-.roadmap-center-circle strong {
-    max-width: 145px;
-    font-size: 21px;
-    line-height: 1.15;
+.roadmap-pie-project-name strong {
+    display: block;
+
     color: #0f172a;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
     overflow-wrap: anywhere;
 }
 
-.roadmap-stages {
-    position: absolute;
-    inset: 35px 42px 35px 30%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-    grid-template-rows: repeat(5, 1fr);
-    column-gap: 95px;
-    row-gap: 10px;
-    z-index: 2;
+.roadmap-pie-help {
+    margin: 5px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    text-align: center;
 }
+
+
+/* ==================================================
+   PIE SEGMENTS
+================================================== */
+
+.pendency-pie-segment {
+    cursor: pointer;
+
+    stroke: #ffffff;
+
+    stroke-width: 2.5;
+
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+}
+
+.pendency-pie-segment:hover {
+    opacity: 0.82;
+}
+
+
+/* ==================================================
+   VERTICAL ROADMAP
+================================================== */
+
+.roadmap-vertical-section {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 2px 0;
+}
+
+.roadmap-vertical-stages {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 7px;
+}
+
+
+/* ==================================================
+   VERTICAL CONNECTING LINE
+================================================== */
+
+.roadmap-vertical-stages::before {
+    content: "";
+
+    position: absolute;
+
+    left: 22px;
+
+    top: 25px;
+    bottom: 25px;
+
+    width: 2px;
+
+    background: #d8e0e9;
+
+    z-index: 0;
+}
+
+
+/* ==================================================
+   STAGE
+================================================== */
 
 .roadmap-stage {
     position: relative;
-    display: flex;
-    align-items: center;
-    min-width: 0;
-    padding: 0;
+
+    width: 100%;
+
+    min-height: 52px;
+
+    flex: 1;
+
+    z-index: 1;
 }
 
+
+/* ==================================================
+   STAGE BUTTON
+================================================== */
+
 .roadmap-stage-card {
-    position: relative;
     width: 100%;
-    min-height: 72px;
+    height: 100%;
+
+    min-height: 52px;
+
+    padding: 7px 14px 7px 8px;
+
     display: flex;
     align-items: center;
+
     gap: 12px;
-    padding: 12px 15px;
+
     box-sizing: border-box;
-    text-align: left;
+
+    background: #ffffff;
+
     border: 1px solid #dbe2ea;
-    border-radius: 10px;
-    background: #f8fafc;
-    color: #334155;
+
+    border-radius: 9px;
+
     cursor: pointer;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+
+    text-align: left;
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
 .roadmap-stage-card:hover {
-    transform: translateY(-2px);
+    transform: translateX(2px);
+
     border-color: #93c5fd;
-    box-shadow: 0 8px 18px rgba(15,23,42,.08);
+
+    box-shadow: 0 5px 14px rgba(15, 23, 42, 0.07);
 }
 
+
+/* ==================================================
+   NUMBER
+================================================== */
+
 .roadmap-stage-number {
-    flex: 0 0 34px;
     width: 34px;
     height: 34px;
+
+    flex: 0 0 34px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 50%;
-    background: #e2e8f0;
+
+    background: #e8edf3;
+
     color: #64748b;
-    font-size: 12px;
+
+    font-size: 11px;
     font-weight: 800;
+
+    border: 2px solid #ffffff;
+
+    box-sizing: border-box;
+
+    z-index: 2;
 }
+
+
+/* ==================================================
+   TEXT
+================================================== */
 
 .roadmap-stage-text {
     min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
 }
 
 .roadmap-stage-text strong {
-    display: block;
-    font-size: 13px;
-    line-height: 1.25;
-    color: #334155;
+    color: #1e293b;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.15;
 }
 
 .roadmap-stage-text span {
-    display: block;
-    margin-top: 4px;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .05em;
     color: #94a3b8;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
 }
 
+
+/* ==================================================
+   COMPLETED
+================================================== */
+
 .roadmap-stage.completed .roadmap-stage-card {
-    background: #f0fdf4;
+    background: #effcf4;
+
     border-color: #86efac;
 }
 
 .roadmap-stage.completed .roadmap-stage-number {
     background: #22c55e;
-    color: #fff;
+
+    color: #ffffff;
+
+    border-color: #22c55e;
 }
 
 .roadmap-stage.completed .roadmap-stage-text strong {
     color: #166534;
 }
 
+.roadmap-stage.completed .roadmap-stage-text span {
+    color: #16a34a;
+}
+
+
+/* ==================================================
+   OVERDUE
+================================================== */
+
 .roadmap-stage.overdue .roadmap-stage-card {
-    background: #fff1f2;
+    background: #fff5f5;
+
     border-color: #fca5a5;
 }
 
 .roadmap-stage.overdue .roadmap-stage-number {
     background: #ef4444;
-    color: #fff;
+
+    color: #ffffff;
+
+    border-color: #ef4444;
 }
 
 .roadmap-stage.overdue .roadmap-stage-text strong {
-    color: #b91c1c;
+    color: #991b1b;
 }
 
 .roadmap-stage.overdue .roadmap-stage-text span {
     color: #dc2626;
 }
 
-.roadmap-stage.pending .roadmap-stage-card {
+
+/* ==================================================
+   TIMELINE
+================================================== */
+
+.roadmap-timeline-card {
+    margin-top: 12px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7ef;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+.roadmap-section-heading h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 17px;
+}
+
+.roadmap-section-heading p {
+    margin: 4px 0 14px;
+
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+.roadmap-timeline-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.timeline-info-card {
+    min-height: 76px;
+
+    padding: 13px 14px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: #f9fbfd;
+
+    border: 1px solid #e1e7ef;
+
+    border-radius: 9px;
+}
+
+.timeline-info-card span {
+    margin-bottom: 6px;
+
+    color: #64748b;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.timeline-info-card strong {
+    color: #0f172a;
+
+    font-size: 16px;
+}
+
+
+/* ==================================================
+   PENDENCY SUMMARY
+================================================== */
+
+.roadmap-pendency-card {
+    margin-top: 12px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7ef;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+.roadmap-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.roadmap-pendency-table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.roadmap-pendency-table th {
+    padding: 11px 13px;
+
     background: #f8fafc;
+
+    color: #475569;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.roadmap-stage.pending .roadmap-stage-text span {
-    color: #94a3b8;
+.roadmap-pendency-table td {
+    padding: 12px 13px;
+
+    color: #334155;
+
+    font-size: 11px;
+
+    border-bottom: 1px solid #eef2f7;
 }
 
-@media (max-width: 1100px) {
-    .roadmap-canvas {
-        min-height: 900px;
+.roadmap-pendency-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.roadmap-view-comment {
+    padding: 5px 10px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 6px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.roadmap-view-comment:hover {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .roadmap-main-area {
+        grid-template-columns: 35% 65%;
     }
 
-    .roadmap-center-node {
-        left: 13%;
-        width: 180px;
-        height: 180px;
+    .roadmap-pie-wrapper,
+    .pendency-pie-chart {
+        width: 200px;
+        height: 200px;
     }
 
-    .roadmap-stages {
-        inset-left: 25%;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(10, 1fr);
-        row-gap: 6px;
+    .roadmap-timeline-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 700px) {
+
+@media (max-width: 750px) {
+
     .project-roadmap-content {
         padding: 14px;
     }
 
-    .roadmap-project-bar,
-    .roadmap-card-header {
+    .roadmap-project-bar {
         align-items: flex-start;
+
         flex-direction: column;
     }
 
     .roadmap-project-meta {
-        flex-wrap: wrap;
+        width: 100%;
     }
 
-    .roadmap-canvas {
-        min-height: auto;
-        padding: 20px;
-    }
+    .roadmap-card-header {
+        align-items: flex-start;
 
-    .roadmap-wires,
-    .roadmap-center-node {
-        display: none;
-    }
-
-    .roadmap-stages {
-        position: relative;
-        inset: auto;
-        display: flex;
         flex-direction: column;
+    }
+
+    .roadmap-main-area {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .roadmap-pie-section {
+        padding-bottom: 0;
+    }
+
+    .roadmap-timeline-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pendency-legend {
         gap: 10px;
     }
+}
 
-    .roadmap-stage-card {
-        min-height: 66px;
-    }
+/* ==================================================
+   PENDENCY PROGRESS BAR
+================================================== */
+
+.pendency-progress-wrapper {
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pendency-progress-bar {
+    position: relative;
+    width: 100%;
+    height: 9px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e5e7eb;
+}
+
+.pendency-progress-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #60a5fa
+    );
+    transition: width .35s ease;
+}
+
+.pendency-progress-text {
+    flex: 0 0 42px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #334155;
+    text-align: right;
+}
+
+/* Percentage column center alignment */
+.roadmap-pendency-table td:nth-child(3) {
+    text-align: center;
+}
+
+.roadmap-pendency-table th:nth-child(3) {
+    text-align: center;
+}
+
+.roadmap-pendency-table td:nth-child(3) .pendency-progress-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==================================================
+   VIEW COMMENT - CENTER ALIGNMENT
+================================================== */
+
+.roadmap-pendency-table th:nth-child(4),
+.roadmap-pendency-table td:nth-child(4) {
+    text-align: center;
+}
+
+.roadmap-pendency-table td:nth-child(4) .roadmap-view-comment {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.roadmap-pendency-table thead th {
+    background: #1e4376;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    padding: 14px 13px;
+    border: none;
+}
+
+.roadmap-pendency-table thead th:first-child {
+    text-align: left;
+    border-top-left-radius: 12px;
+}
+
+.roadmap-pendency-table thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* ==================================================
+   PENDENCY PIE CHART CALLOUTS
+================================================== */
+
+.pendency-pie-callouts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+.roadmap-pie-wrapper {
+    position: relative;
+    overflow: visible;
+}
+
+.pendency-callout {
+    position: absolute;
+    min-width: 145px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1.5px solid var(--callout-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    color: var(--callout-color);
+}
+
+.pendency-callout-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.pendency-callout-info {
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.pendency-callout-line {
+    position: absolute;
+    height: 2px;
+    background: var(--callout-color);
+    transform-origin: left center;
+}
+
+.pendency-callout-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: var(--callout-color);
+    box-shadow: 0 0 0 1px var(--callout-color);
+}
+
+/* ==================================================
+   PIE CALLOUT POSITIONING FIX
+================================================== */
+
+.roadmap-pie-wrapper {
+    position: relative;
+    overflow: visible;
+}
+
+.pendency-pie-callouts {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.pendency-callout-lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 19;
+}
+
+.pendency-callout {
+    z-index: 20;
+}
+
+/* ==================================================
+   PIE CALLOUT AREA
+================================================== */
+
+.roadmap-pie-section {
+    position: relative;
+    overflow: visible;
+}
+
+.pendency-pie-callouts {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 20;
+}
+
+/* Pendency % Progress Bar Colors */
+
+.progress-bar.ba {
+    background: #3b82f6;
+}
+
+.progress-bar.development {
+    background: #22c55e;
+}
+
+.progress-bar.client {
+    background: #f59e0b;
+}
+
+.progress-bar.review {
+    background: #8b5cf6;
+}
+
+.progress-bar.testing {
+    background: #ef4444;
+}
+
+/* ==================================================
+   PENDENCY CONNECTOR LINES
+================================================== */
+
+.pendency-connector-chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 5;
+}
+
+
+.roadmap-pendency-table thead th:nth-child(2) {
+    text-align: left;
+}
+
+.pendency-progress-fill.ba {
+    background: #3b82f6;
+}
+
+.pendency-progress-fill.development {
+    background: #22c55e;
+}
+
+.pendency-progress-fill.client {
+    background: #f59e0b;
+}
+
+.pendency-progress-fill.review {
+    background: #8b5cf6;
+}
+
+.pendency-progress-fill.testing {
+    background: #ef4444;
 }
