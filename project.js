@@ -306,7 +306,7 @@ function showProjects(projectList) {
     document.createElement("a");
 
 projectNameLink.href =
-    "project-profile.HTML?project=" +
+    "project-profile.html?project=" +
     encodeURIComponent(project.projectName);
 
 projectNameLink.className =
